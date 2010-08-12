@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: Jus Navigandi
+  url: http://jus.uol.com.br
+
+two:
+  title: Uol
+  url: http://uol.com.br

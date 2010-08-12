@@ -1,0 +1,1370 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<title>Eleitor tem até 23 de setembro para pedir 2ªvia do título - Eleições 2010 - Piauí- 180graus</title>
+<meta name="description" content="Para votar em 3 de outubro, o eleitor que perdeu ou teve o título extraviado têm até o dia 23 de setembro para pedir uma segunda via (reimpr" lang="pt-BR" />
+<meta name="keywords" content="Eleitor, 2ª via, Título,piaui" lang="pt-BR" />
+
+
+<meta name="revisit-after" content="1 day" />
+<meta http-equiv="expires" content="0"/>
+<meta http-equiv="cache-control" content="no-cache,must-revalidate"/>
+<meta http-equiv="pragma" content="no-cache"/>
+<meta name="generator" content="Genesis Framework" />
+<meta name="verify-v1" content="IjDsvoRUMyd5NZiHO5h8ylRKiTILfhZzzOxecSRPvkg=" />
+<meta name="autor" content="Brasil Portais" />
+<meta name="language" content="pt-br" />
+<meta name="robots" content="all" />
+<meta name="developer" content="SEO - Hielbert Santos Ferreira - Gerencia TI BrasilPortais/180graus" />
+ <link rel="alternate" type="application/rss+xml" title="180graus - Todos as materias" href="http://feeds2.feedburner.com/180graus" />
+
+    <!--Inclusao das CSS-->
+	<link rel="stylesheet" type="text/css" media="screen,print" href="/webroot/css/estilo.css" />
+    <link rel="stylesheet" type="text/css" media="screen,print" href="/webroot/css/abas.css" />
+    <link rel="stylesheet" type="text/css" media="screen,print" href="/webroot/css/thickbox.css" />
+
+	<!--Inclusao dos js-->
+	<script type="text/javascript" src="/webroot/js/jquery.js" ></script>
+	<script type="text/javascript" src="/webroot/js/cycle.js"></script>
+	<script type="text/javascript" src="/webroot/js/thickbox.js"></script>
+	<script type="text/javascript" src="/webroot/js/jquery-timers.js"></script>
+	<script type="text/javascript" src="/webroot/js/add-favorito.js"></script>
+	<script type="text/javascript" src="/webroot/js/ajax.js"></script>
+
+
+<script type="text/javascript">
+
+
+	
+	function mostraBannerSwf(local, nomenclatura, arquivo, tempo, width, height)
+	{
+		//var conteudo;
+		var caminho = 'http://genesis.brasilportais.com.br/webroot/img/publicidades/'+arquivo;
+		var conteudo = '<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="'+width+'" height="'+height+'"><param name="movie" value="'+caminho+'" /><param name="quality" value="high" /><param name="wmode" value="transparent"><embed src="'+caminho+'" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash"  wmode="transparent" width="'+width+'" height="'+height+'"></embed></object><img src="/images/1pt.gif" onload="time'+nomenclatura+'('+tempo+')" width="0" height="0">';
+		 $("#"+local).html(conteudo);
+	}
+	
+	
+	function mostraBannerImagem(local, nomenclatura, arquivo, tempo, width, height, alt,url)
+	{
+		//var conteudo;
+		var caminho = 'http://genesis.brasilportais.com.br/webroot/img/publicidades/'+arquivo;
+		var conteudo = '<a href="http://'+url+'"><img src="'+caminho+'" width="'+width+'" height="'+height+'"></a><img src="/images/1pt.gif" onload="time'+nomenclatura+'('+tempo+')" alt="'+alt+'" title="'+alt+'" width="0" height="0">';
+		 $("#"+local).html(conteudo);
+	}
+	
+	var bannerSB = bannerBI = bannerBE = bannerBG = bannerQ1 = bannerQ2 = bannerQ3 = bannerPT = 1;
+	
+	// SUPERBANNER - 728x90
+	/*function mudarSuperBanner()
+	{
+		if (bannerSB == 0){}
+		
+		
+	}
+	*/
+	// ILHA - 300x250
+	function mudarBannerIlha()
+	{
+		if (bannerBI == 0){}
+		
+		
+	}
+	
+	// BANNER EXTRA - 620x80
+	function mudarBannerExtra()
+	{
+		if (bannerBE == 0){}
+		
+		
+	}
+	
+	// GIGANTE - 960x119
+	function mudarBannerGigante()
+	{
+		if (bannerBG == 0){}
+		
+		else if (bannerBG == 1)
+		{
+			mostraBannerSwf('topo_bannerG','BG','d61135ecce.swf',20000,960,119);
+			
+			bannerBG = 2; 
+		}
+		else if (bannerBG == 2)
+		{
+			mostraBannerSwf('topo_bannerG','BG','b1cc9191fe.swf',20000,960,119);
+			
+			bannerBG = 3; 
+		}
+		else if (bannerBG == 3)
+		{
+			mostraBannerSwf('topo_bannerG','BG','e500a19923.swf',20000,960,119);
+			
+			bannerBG = 1; 
+		}
+		
+	}
+	
+	// QUADRADO_1 - 200x200
+	function mudarBannerQuadrado1()
+	{
+		if (bannerQ1 == 0){}
+		
+		
+	}	
+		
+	// QUADRADO_2 - 200x200
+	function mudarBannerQuadrado2()
+	{
+		if (bannerQ2 == 0){}
+		
+		else if (bannerQ2 == 1)
+		{
+			mostraBannerSwf('banner_quadrado2','Q2','cae0e58da7.swf',10000,200,200);
+			
+			bannerQ2 = 1; 
+		}
+		
+	}	
+	
+	// QUADRADO_3 - 200x200
+	function mudarBannerQuadrado3()
+	{
+		if (bannerQ3 == 0){}
+		
+		else if (bannerQ3 == 1)
+		{
+			mostraBannerSwf('banner_quadrado3','Q3','6cfef0b628.swf',20000,200,200);
+			
+			bannerQ3 = 1; 
+		}
+		
+	}
+	
+	// HOME PATROCINADORES - 119x35
+	function mudarBannerPatrocinador()
+	{
+		if (bannerPT == 0){}
+		
+		else if (bannerPT == 1)
+		{
+			mostraBannerImagem('patrocinadores_menu','PT','673a45ea30.jpg',6000,120,35,'SESC','0');
+			
+			bannerPT = 2; 
+		}
+		else if (bannerPT == 2)
+		{
+			mostraBannerImagem('patrocinadores_menu','PT','48e923dd19.gif',6000,120,35,'ALEPI','0');
+			
+			bannerPT = 3; 
+		}
+		else if (bannerPT == 3)
+		{
+			mostraBannerImagem('patrocinadores_menu','PT','28407f7f2e.jpg',6000,120,35,'JUREMA','0');
+			
+			bannerPT = 1; 
+		}
+		
+	}	
+	
+
+	// SUPERBANNER - 728x90
+	/*function timeSB(tempoT)
+	{
+		window.setTimeout('mudarSuperBanner();', tempoT);
+	}*/
+	
+	// ILHA - 300x250
+	function timeBI(tempoI)
+	{
+		window.setTimeout('mudarBannerIlha();', tempoI);
+	}
+	
+	// BANNER EXTRA - 620x80
+	function timeBE(tempoE)
+	{
+		setTimeout('mudarBannerExtra();', tempoE);
+	}
+	// GIGANTE - 960x119
+	function timeBG(tempoG)
+	{
+		//setTimeout('mudarBannerGigante();', tempoG);
+			$().oneTime(tempoG, function(){
+						mudarBannerGigante();
+								});		
+	}
+	// QUADRADO_1 - 200x200
+	function timeQ1(tempoQ)
+	{
+		setTimeout('mudarBannerQuadrado1();', tempoQ);
+	}
+	// QUADRADO_2 - 200x200
+	function timeQ2(tempoQ)
+	{
+		setTimeout('mudarBannerQuadrado2();', tempoQ);
+	}
+	// QUADRADO_3 - 200x200
+	function timeQ3(tempoQ)
+	{
+		setTimeout('mudarBannerQuadrado3();', tempoQ);
+	}
+	// HOME PATROCINADORES - 119x35
+	function timePT(tempoQ)
+	{
+		setTimeout('mudarBannerPatrocinador();', tempoQ);
+	}
+</script>
+
+
+</head>
+<body>
+<!-- google_ad_section_start -->
+<div id="bp-corpo">
+	<!-- Lateral Esquerda - Menu -->
+<script language="javascript1.5" type="text/javascript">
+
+function addToFavorites(){
+		var bookmarkurl=document.location;
+		var bookmarktitle=document.title;
+
+		if(navigator.appName == "Netscape"){
+			alert("Para adicionar este site aos Favoritos: \n - Clique em OK \n - Pressione CTRL e a letra D");
+		}
+		else{
+			if (document.all){
+				window.external.AddFavorite(bookmarkurl,bookmarktitle);
+			}
+		}
+	}
+
+</script>
+
+<div id="bp-menu">
+  <a href="/" title="Notícias do Piauí, Teresina, Parnaíba, Floriano, Picos, Campo Maior, Piripiri - 180graus.com"><img id="logo" alt="Notícias do Piauí, Teresina, Parnaíba, Floriano, Picos, Campo Maior, Piripiri - 180graus.com" src="http://genesis.brasilportais.com.br/webroot/img/websites/imagem_490954df03.jpg" /></a> <span class="data">Quinta 12/08/2010</span>
+    <div id="caixa-rotativa">
+      <div><a href="#"><div id="patrocinadores_menu">
+    <!--Começo Publicidade do Patrocinador-->
+		<script> 
+			timePT(1);
+        </script> 
+    <!--Fim da Publicidade do Patrocinador-->
+</div></a></div>
+    </div>
+    <ul class="info">
+      <li><a href="javascript:;" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.180graus.brasilportais.com.br');">Tornar p&aacute;gina inicial</a></li>
+      
+      <li><a href="http://twitter.com/180graus" title="Siga-nos no Twitter!" target="_blank"><img src="/imgs/icone_twitter.gif" alt="Siga-nos no Twitter!" title="Siga-nos no Twitter!" /></a></li>
+      
+      <li class="mail">redacao@180graus.com</li>
+    </ul>
+    <ul class="extra">
+      <li><a href="http://180graus.brasilportais.com.br/cidades">Leia Not&iacute;cias do seu Munic&iacute;pio</a></li>
+     
+    </ul>
+    
+        
+       
+    <ul class="extra">
+      <li><a href="http://boletimdosmunicipios.com.br" title="Boletim dos Municípios do Piauí - As últimas notícias sobre política, famosos, e eventos dos municípios do Piauí!" target="_blank">Boletim dos Municípios</a></li>
+     
+    </ul>
+	
+
+      <div style="margin-bottom:10px">
+    	 <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="119" height="240">
+        	<param name="movie" value="http://180graus.brasilportais.com.br/imgs/teens.swf" />
+       		<param name="quality" value="high" />
+        	<embed src="http://180graus.brasilportais.com.br/imgs/teens.swf" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="119" height="240"></embed>
+        </object>
+	  
+	  </div>
+
+    
+          <dl class="menu">
+        <dt>Editorias</dt>
+                      <dd><a href="http://180graus.brasilportais.com.br/blogs" title="Blogs" alt="Blogs">Blogs</a></dd>
+                      <dd><a href="http://180graus.brasilportais.com.br/cidades" title="Cidades" alt="Cidades">Cidades</a></dd>
+                      <dd><a href="http://180graus.brasilportais.com.br/classificados" title="Classificados" alt="Classificados">Classificados</a></dd>
+                      <dd><a href="http://180graus.brasilportais.com.br/comentarios" title="Comentários" alt="Comentários">Comentários</a></dd>
+                      <dd><a href="http://180graus.brasilportais.com.br/cultura" title="Cultura" alt="Cultura">Cultura</a></dd>
+                      <dd><a href="http://180graus.brasilportais.com.br/enquetes" title="Enquetes" alt="Enquetes">Enquetes</a></dd>
+                      <dd><a href="http://180graus.brasilportais.com.br/esporte" title="Esporte" alt="Esporte">Esporte</a></dd>
+                      <dd><a href="http://180graus.brasilportais.com.br/gente" title="Gente" alt="Gente">Gente</a></dd>
+                      <dd><a href="http://180graus.brasilportais.com.br/geral" title="Geral" alt="Geral">Geral</a></dd>
+                      <dd><a href="http://180graus.brasilportais.com.br/murais" title="Murais" alt="Murais">Murais</a></dd>
+                      <dd><a href="http://180graus.brasilportais.com.br/politica" title="Política" alt="Política">Política</a></dd>
+                      <dd><a href="http://180graus.brasilportais.com.br/ultimas-noticias" title="Últimas Notícias" alt="Últimas Notícias">Últimas Notícias</a></dd>
+                      <dd><a href="http://180graus.brasilportais.com.br/videos" title="Vídeos" alt="Vídeos">Vídeos</a></dd>
+                </dl>
+          <dl class="menu">
+        <dt>Colunas</dt>
+                      <dd><a href="http://albertpiaui.180graus.com/" title="Albert Piauí" alt="Albert Piauí">Albert Piauí</a></dd>
+                      <dd><a href="http://180graus.brasilportais.com.br/augusto-cesar" title="Augusto César" alt="Augusto César">Augusto César</a></dd>
+                      <dd><a href="http://180graus.brasilportais.com.br/close" title="Close" alt="Close">Close</a></dd>
+                      <dd><a href="http://www.teens180.com/" title="Teens 180" alt="Teens 180">Teens 180</a></dd>
+                </dl>
+          <dl class="menu">
+        <dt>Blogs Especiais</dt>
+                      <dd><a href="http://180graus.brasilportais.com.br/bbb10---big-brother-brasil" title="BBB10 - Big Brother Brasil" alt="BBB10 - Big Brother Brasil">BBB10 - Big Brother Brasil</a></dd>
+                      <dd><a href="http://180graus.brasilportais.com.br/carnaval-2010" title="Carnaval 2010" alt="Carnaval 2010">Carnaval 2010</a></dd>
+                      <dd><a href="http://180graus.brasilportais.com.br/cenario-politico" title="Cenário Político" alt="Cenário Político">Cenário Político</a></dd>
+                      <dd><a href="http://180graus.brasilportais.com.br/eleicoes-crm" title="Eleições CRM" alt="Eleições CRM">Eleições CRM</a></dd>
+                      <dd><a href="http://180graus.brasilportais.com.br/festival-de-verao" title="Festival de Verão" alt="Festival de Verão">Festival de Verão</a></dd>
+                      <dd><a href="http://180graus.brasilportais.com.br/hexa-copa" title="Hexa Copa" alt="Hexa Copa">Hexa Copa</a></dd>
+                      <dd><a href="http://180graus.brasilportais.com.br/miss-piaui" title="Miss Piauí" alt="Miss Piauí">Miss Piauí</a></dd>
+                      <dd><a href="http://180graus.brasilportais.com.br/palomma-kart" title="Palomma Kart" alt="Palomma Kart">Palomma Kart</a></dd>
+                      <dd><a href="http://180graus.brasilportais.com.br/pesquisa-eleitoral" title="Pesquisa Eleitoral" alt="Pesquisa Eleitoral">Pesquisa Eleitoral</a></dd>
+                      <dd><a href="http://180graus.brasilportais.com.br/piaui-agroshow" title="Piauí AgroShow" alt="Piauí AgroShow">Piauí AgroShow</a></dd>
+                      <dd><a href="http://180graus.brasilportais.com.br/piaui-fest-music" title="Piauí Fest Music" alt="Piauí Fest Music">Piauí Fest Music</a></dd>
+                      <dd><a href="http://180graus.brasilportais.com.br/piaui-pop-2009" title="Piauí Pop 2009" alt="Piauí Pop 2009">Piauí Pop 2009</a></dd>
+                      <dd><a href="http://180graus.brasilportais.com.br/piaui-sampa" title="Piauí Sampa" alt="Piauí Sampa">Piauí Sampa</a></dd>
+                      <dd><a href="http://180graus.brasilportais.com.br/planeta-micarina" title="Planeta Micarina" alt="Planeta Micarina">Planeta Micarina</a></dd>
+                      <dd><a href="http://180graus.brasilportais.com.br/teresina-fashion" title="Teresina Fashion" alt="Teresina Fashion">Teresina Fashion</a></dd>
+                </dl>
+          <dl class="menu">
+        <dt>Mais</dt>
+                      <dd><a href="http://www.bobnews.com.br" title="BobNews" alt="BobNews">BobNews</a></dd>
+                      <dd><a href="http://www.baixeqi.com.br/" title="Download" alt="Download">Download</a></dd>
+                      <dd><a href="http://180graus-eleicoes2008.brasilportais.com.br/resultados_eleicoes2008/" title="Eleições 2008" alt="Eleições 2008">Eleições 2008</a></dd>
+                      <dd><a href="http://180graus.brasilportais.com.br/rss" title="RSS" alt="RSS">RSS</a></dd>
+                </dl>
+    
+     <dl class="menu">
+      <dt>Blogs</dt>
+                <dd><a href="http://180graus.brasilportais.com.br/banda-larga" title="Banda Larga" alt="Banda Larga">Banda Larga</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/bastidores" title="Bastidores" alt="Bastidores">Bastidores</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/blog-literario" title="Blog Literário" alt="Blog Literário">Blog Literário</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/broadside" title="Broadside" alt="Broadside">Broadside</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/casas-e-shows" title="Casas e Shows" alt="Casas e Shows">Casas e Shows</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/celular" title="Celular" alt="Celular">Celular</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/como-ser-feliz" title="Como ser feliz" alt="Como ser feliz">Como ser feliz</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/consultoria-empresarial" title="Consultoria Empresarial" alt="Consultoria Empresarial">Consultoria Empresarial</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/eleicoes-2010" title="Eleições 2010" alt="Eleições 2010">Eleições 2010</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/entrevistas" title="Entrevistas" alt="Entrevistas">Entrevistas</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/especiais" title="Especiais" alt="Especiais">Especiais</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/espirita" title="Espírita" alt="Espírita">Espírita</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/farmacia" title="Farmácia" alt="Farmácia">Farmácia</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/gospel" title="Gospel" alt="Gospel">Gospel</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/jose-gomes" title="José Gomes" alt="José Gomes">José Gomes</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/meio-ambiente" title="Meio Ambiente" alt="Meio Ambiente">Meio Ambiente</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/mercado" title="Mercado" alt="Mercado">Mercado</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/pedro-alcantara" title="Pedro Alcântara" alt="Pedro Alcântara">Pedro Alcântara</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/piaui" title="Piauí" alt="Piauí">Piauí</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/piaui-no-df---vitrine" title="Piauí no DF - Vitrine" alt="Piauí no DF - Vitrine">Piauí no DF - Vitrine</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/pre-sal" title="Pré-Sal" alt="Pré-Sal">Pré-Sal</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/salada" title="Salada" alt="Salada">Salada</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/transitando" title="Transitando" alt="Transitando">Transitando</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/veiculos" title="Veículos" alt="Veículos">Veículos</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/zozimo-tavares" title="Zózimo Tavares" alt="Zózimo Tavares">Zózimo Tavares</a></dd>
+             </dl>
+
+    <dl class="menu">
+      <dt>Cidades</dt>
+                <dd><a href="http://180graus.brasilportais.com.br/altos" title="Altos" alt="Altos">Altos</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/beneditinos" title="Beneditinos" alt="Beneditinos">Beneditinos</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/buriti-dos-montes" title="Buriti dos Montes" alt="Buriti dos Montes">Buriti dos Montes</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/cocal" title="Cocal" alt="Cocal">Cocal</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/cocal-dos-alves" title="Cocal dos Alves" alt="Cocal dos Alves">Cocal dos Alves</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/domingos-mourao" title="Domingos Mourão" alt="Domingos Mourão">Domingos Mourão</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/floriano" title="Floriano" alt="Floriano">Floriano</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/ilha-grande" title="Ilha Grande" alt="Ilha Grande">Ilha Grande</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/lagoa-de-sao-francisco" title="Lagoa de São Francisco" alt="Lagoa de São Francisco">Lagoa de São Francisco</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/lagoinha-do-piaui" title="Lagoinha do Piauí" alt="Lagoinha do Piauí">Lagoinha do Piauí</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/landri-sales" title="Landri Sales" alt="Landri Sales">Landri Sales</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/luis-correia" title="Luís Correia" alt="Luís Correia">Luís Correia</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/oeiras" title="Oeiras" alt="Oeiras">Oeiras</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/parnaiba" title="Parnaíba" alt="Parnaíba">Parnaíba</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/paulistana" title="Paulistana" alt="Paulistana">Paulistana</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/piracuruca" title="Piracuruca" alt="Piracuruca">Piracuruca</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/prata-do-piaui" title="Prata do Piauí" alt="Prata do Piauí">Prata do Piauí</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/regeneracao" title="Regeneração" alt="Regeneração">Regeneração</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/santa-filomena" title="Santa Filomena" alt="Santa Filomena">Santa Filomena</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/santa-rosa-do-piaui" title="Santa Rosa do Piauí" alt="Santa Rosa do Piauí">Santa Rosa do Piauí</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/sao-miguel-do-tapuio" title="São Miguel do Tapuio" alt="São Miguel do Tapuio">São Miguel do Tapuio</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/sao-pedro" title="São Pedro" alt="São Pedro">São Pedro</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/sao-raimundo-nonato" title="São Raimundo Nonato" alt="São Raimundo Nonato">São Raimundo Nonato</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/urucui" title="Uruçuí" alt="Uruçuí">Uruçuí</a></dd>
+                <dd><a href="http://180graus.brasilportais.com.br/vera-mendes" title="Vera Mendes" alt="Vera Mendes">Vera Mendes</a></dd>
+             </dl>
+
+     <dl class="menu">
+      
+        <dd><a href="/cidades#home-municipios" title="Lista completa de municípios">Todos Municípios</a>
+            
+        </dd>
+     </dl>
+<select name="cidades"style="position:absolute;z-index:1;" onchange="window.open(this.options[this.selectedIndex].value,'_self')" class="cidades-select"> <option selected>Cidade</option><option value="http://180graus.brasilportais.com.br/acaua" >Acauã</option><option value="http://180graus.brasilportais.com.br/agricolandia" >Agricolândia</option><option value="http://180graus.brasilportais.com.br/agua-branca" >Água Branca</option><option value="http://180graus.brasilportais.com.br/alagoa-grande" >Alagoa Grande</option><option value="http://180graus.brasilportais.com.br/alagoinha-do-piaui" >Alagoinha do Piauí</option><option value="http://180graus.brasilportais.com.br/alegrete" >Alegrete</option><option value="http://180graus.brasilportais.com.br/alto-longa" >Alto Longá</option><option value="http://180graus.brasilportais.com.br/altos" >Altos</option><option value="http://180graus.brasilportais.com.br/alvorada-do-gurgueia" >Alvorada do Gurguéia</option><option value="http://180graus.brasilportais.com.br/amarante" >Amarante</option><option value="http://180graus.brasilportais.com.br/angical" >Angical</option><option value="http://180graus.brasilportais.com.br/anisio-de-abreu" >Anísio de Abreu</option><option value="http://180graus.brasilportais.com.br/antonio-almeida" >Antônio Almeida</option><option value="http://180graus.brasilportais.com.br/aroazes" >Aroazes</option><option value="http://180graus.brasilportais.com.br/aroeiras-do-itaim" >Aroeiras do Itaim</option><option value="http://180graus.brasilportais.com.br/arraial" >Arraial</option><option value="http://180graus.brasilportais.com.br/assuncao-do-piaui" >Assunção do Piauí</option><option value="http://180graus.brasilportais.com.br/avelino-lopes" >Avelino Lopes</option><option value="http://180graus.brasilportais.com.br/baixa-grande-do-ribeiro" >Baixa Grande do Ribeiro</option><option value="http://180graus.brasilportais.com.br/barra-dalcantara" >Barra d\'Alcântara</option><option value="http://180graus.brasilportais.com.br/barras" >Barras</option><option value="http://180graus.brasilportais.com.br/barreiras-do-piaui" >Barreiras do Piauí</option><option value="http://180graus.brasilportais.com.br/barro-duro" >Barro Duro</option><option value="http://180graus.brasilportais.com.br/batalha" >Batalha</option><option value="http://180graus.brasilportais.com.br/bela-vista-do-piaui" >Bela Vista do Piauí</option><option value="http://180graus.brasilportais.com.br/belem-do-piaui" >Belém do Piauí</option><option value="http://180graus.brasilportais.com.br/beneditinos" >Beneditinos</option><option value="http://180graus.brasilportais.com.br/benedito-leite" >Benedito Leite</option><option value="http://180graus.brasilportais.com.br/benedito-leite---ma" >Benedito Leite - MA</option><option value="http://180graus.brasilportais.com.br/bertolinia" >Bertolínia</option><option value="http://180graus.brasilportais.com.br/betania-do-piaui" >Betânia do Piauí</option><option value="http://180graus.brasilportais.com.br/boa-hora" >Boa Hora</option><option value="http://180graus.brasilportais.com.br/bocaina" >Bocaina</option><option value="http://180graus.brasilportais.com.br/bom-jesus" >Bom Jesus</option><option value="http://180graus.brasilportais.com.br/bom-principio" >Bom Princípio</option><option value="http://180graus.brasilportais.com.br/bonfim-do-piaui" >Bonfim do Piauí</option><option value="http://180graus.brasilportais.com.br/boqueirao" >Boqueirão</option><option value="http://180graus.brasilportais.com.br/brasileira" >Brasileira</option><option value="http://180graus.brasilportais.com.br/brejo" >Brejo</option><option value="http://180graus.brasilportais.com.br/brejo-do-piaui" >Brejo do Piauí</option><option value="http://180graus.brasilportais.com.br/buriti-dos-lopes" >Buriti dos Lopes</option><option value="http://180graus.brasilportais.com.br/buriti-dos-montes" >Buriti dos Montes</option><option value="http://180graus.brasilportais.com.br/cabeceiras" >Cabeceiras</option><option value="http://180graus.brasilportais.com.br/cajazeiras" >Cajazeiras</option><option value="http://180graus.brasilportais.com.br/cajueiro-da-praia" >Cajueiro da Praia</option><option value="http://180graus.brasilportais.com.br/caldeirao-grande" >Caldeirão Grande</option><option value="http://180graus.brasilportais.com.br/campinas" >Campinas</option><option value="http://180graus.brasilportais.com.br/campo-alegre-do-fidalgo" >Campo Alegre do Fidalgo</option><option value="http://180graus.brasilportais.com.br/campo-grande" >Campo Grande</option><option value="http://180graus.brasilportais.com.br/campo-largo" >Campo Largo</option><option value="http://180graus.brasilportais.com.br/campo-maior" >Campo Maior</option><option value="http://180graus.brasilportais.com.br/canavieira" >Canavieira</option><option value="http://180graus.brasilportais.com.br/canto-do-buriti" >Canto do Buriti</option><option value="http://180graus.brasilportais.com.br/capitao-de-campos" >Capitão de Campos</option><option value="http://180graus.brasilportais.com.br/capitao-gervasio-de-oliveira" >Capitão Gervásio de Oliveira</option><option value="http://180graus.brasilportais.com.br/caracol" >Caracol</option><option value="http://180graus.brasilportais.com.br/caraubas" >Caraúbas</option><option value="http://180graus.brasilportais.com.br/caridade" >Caridade</option><option value="http://180graus.brasilportais.com.br/castelo-do-piaui" >Castelo do Piauí</option><option value="http://180graus.brasilportais.com.br/caxias" >Caxias</option><option value="http://180graus.brasilportais.com.br/caxingo" >Caxingó</option><option value="http://180graus.brasilportais.com.br/cocal" >Cocal</option><option value="http://180graus.brasilportais.com.br/cocal-de-telha" >Cocal de Telha</option><option value="http://180graus.brasilportais.com.br/cocal-dos-alves" >Cocal dos Alves</option><option value="http://180graus.brasilportais.com.br/coelho-neto" >Coelho Neto</option><option value="http://180graus.brasilportais.com.br/coivaras" >Coivaras</option><option value="http://180graus.brasilportais.com.br/colonia-do-gurgueia" >Colônia do Gurguéia</option><option value="http://180graus.brasilportais.com.br/colonia-do-piaui" >Colônia do Piauí</option><option value="http://180graus.brasilportais.com.br/conceicao-do-caninde" >Conceição do Canindé</option><option value="http://180graus.brasilportais.com.br/coronel-jose-dias" >Coronel José Dias</option><option value="http://180graus.brasilportais.com.br/corrente" >Corrente</option><option value="http://180graus.brasilportais.com.br/cristalandia-do-piaui" >Cristalândia do Piauí</option><option value="http://180graus.brasilportais.com.br/cristino-castro" >Cristino Castro</option><option value="http://180graus.brasilportais.com.br/curimata" >Curimatá</option><option value="http://180graus.brasilportais.com.br/currais" >Currais</option><option value="http://180graus.brasilportais.com.br/curral-novo-do-piaui" >Curral Novo do Piauí</option><option value="http://180graus.brasilportais.com.br/curralinhos" >Curralinhos</option><option value="http://180graus.brasilportais.com.br/demerval-lobao" >Demerval Lobão</option><option value="http://180graus.brasilportais.com.br/dirceu-arcoverde" >Dirceu Arcoverde</option><option value="http://180graus.brasilportais.com.br/dom-expedito-lopes" >Dom Expedito Lopes</option><option value="http://180graus.brasilportais.com.br/dom-inocencio" >Dom Inocêncio</option><option value="http://180graus.brasilportais.com.br/domingos-mourao" >Domingos Mourão</option><option value="http://180graus.brasilportais.com.br/elesbao-veloso" >Elesbão Veloso</option><option value="http://180graus.brasilportais.com.br/eliseu-martins" >Eliseu Martins</option><option value="http://180graus.brasilportais.com.br/esperantina" >Esperantina</option><option value="http://180graus.brasilportais.com.br/fartura-do-piaui" >Fartura do Piauí</option><option value="http://180graus.brasilportais.com.br/flores-do-piaui" >Flores do Piauí</option><option value="http://180graus.brasilportais.com.br/floresta-do-piaui" >Floresta do Piauí</option><option value="http://180graus.brasilportais.com.br/floriano" >Floriano</option><option value="http://180graus.brasilportais.com.br/francinopolis" >Francinópolis</option><option value="http://180graus.brasilportais.com.br/francisco-ayres" >Francisco Ayres</option><option value="http://180graus.brasilportais.com.br/francisco-macedo" >Francisco Macedo</option><option value="http://180graus.brasilportais.com.br/francisco-santos" >Francisco Santos</option><option value="http://180graus.brasilportais.com.br/fronteiras" >Fronteiras</option><option value="http://180graus.brasilportais.com.br/geminiano" >Geminiano</option><option value="http://180graus.brasilportais.com.br/gilbues" >Gilbués</option><option value="http://180graus.brasilportais.com.br/guadalupe" >Guadalupe</option><option value="http://180graus.brasilportais.com.br/guaribas" >Guaribas</option><option value="http://180graus.brasilportais.com.br/hugo-napoleao" >Hugo Napoleão</option><option value="http://180graus.brasilportais.com.br/ilha-grande" >Ilha Grande</option><option value="http://180graus.brasilportais.com.br/inhuma" >Inhuma</option><option value="http://180graus.brasilportais.com.br/ipiranga" >Ipiranga</option><option value="http://180graus.brasilportais.com.br/isaias-coelho" >Isaías Coelho</option><option value="http://180graus.brasilportais.com.br/itainopolis" >Itainópolis</option><option value="http://180graus.brasilportais.com.br/itaueira" >Itaueira</option><option value="http://180graus.brasilportais.com.br/jacobina-do-piaui" >Jacobina do Piauí</option><option value="http://180graus.brasilportais.com.br/jaicos" >Jaicós</option><option value="http://180graus.brasilportais.com.br/jardim-do-mulato" >Jardim do Mulato</option><option value="http://180graus.brasilportais.com.br/jatoba-do-piaui" >Jatobá do Piauí</option><option value="http://180graus.brasilportais.com.br/jerumenha" >Jerumenha</option><option value="http://180graus.brasilportais.com.br/joao-costa" >João Costa</option><option value="http://180graus.brasilportais.com.br/joaquim-pires" >Joaquim Pires</option><option value="http://180graus.brasilportais.com.br/joca-marques" >Joca Marques</option><option value="http://180graus.brasilportais.com.br/jose-de-freitas" >José de Freitas</option><option value="http://180graus.brasilportais.com.br/juazeiro-do-piaui" >Juazeiro do Piauí</option><option value="http://180graus.brasilportais.com.br/julio-borges" >Júlio Borges</option><option value="http://180graus.brasilportais.com.br/jurema" >Jurema</option><option value="http://180graus.brasilportais.com.br/lagoa-alegre" >Lagoa Alegre</option><option value="http://180graus.brasilportais.com.br/lagoa-de-sao-francisco" >Lagoa de São Francisco</option><option value="http://180graus.brasilportais.com.br/lagoa-do-barro" >Lagoa do Barro</option><option value="http://180graus.brasilportais.com.br/lagoa-do-piaui" >Lagoa do Piauí</option><option value="http://180graus.brasilportais.com.br/lagoa-do-sitio" >Lagoa do Sítio</option><option value="http://180graus.brasilportais.com.br/lagoinha-do-piaui" >Lagoinha do Piauí</option><option value="http://180graus.brasilportais.com.br/landri-sales" >Landri Sales</option><option value="http://180graus.brasilportais.com.br/luis-correia" >Luís Correia</option><option value="http://180graus.brasilportais.com.br/luzilandia" >Luzilândia</option><option value="http://180graus.brasilportais.com.br/madeiro" >Madeiro</option><option value="http://180graus.brasilportais.com.br/manoel-emidio" >Manoel Emídio</option><option value="http://180graus.brasilportais.com.br/marcolandia" >Marcolândia</option><option value="http://180graus.brasilportais.com.br/marcos-parente" >Marcos Parente</option><option value="http://180graus.brasilportais.com.br/massape-do-piaui" >Massapê do Piauí</option><option value="http://180graus.brasilportais.com.br/matias-olimpio" >Matias Olímpio</option><option value="http://180graus.brasilportais.com.br/miguel-alves" >Miguel Alves</option><option value="http://180graus.brasilportais.com.br/miguel-leao" >Miguel Leão</option><option value="http://180graus.brasilportais.com.br/milton-brandao" >Milton Brandão</option><option value="http://180graus.brasilportais.com.br/monsenhor-gil" >Monsenhor Gil</option><option value="http://180graus.brasilportais.com.br/monsenhor-hipolito" >Monsenhor Hipólito</option><option value="http://180graus.brasilportais.com.br/monte-alegre-do-piaui" >Monte Alegre do Piauí</option><option value="http://180graus.brasilportais.com.br/morro-cabeca-no-tempo" >Morro Cabeça no Tempo</option><option value="http://180graus.brasilportais.com.br/morro-do-chapeu-do-piaui" >Morro do Chapéu do Piauí</option><option value="http://180graus.brasilportais.com.br/murici-dos-portelas" >Murici dos Portelas</option><option value="http://180graus.brasilportais.com.br/nazare-do-piaui" >Nazaré do Piauí</option><option value="http://180graus.brasilportais.com.br/nazaria" >Nazária</option><option value="http://180graus.brasilportais.com.br/nossa-senhora-de-nazare" >Nossa Senhora de Nazaré</option><option value="http://180graus.brasilportais.com.br/nossa-senhora-dos-remedios" >Nossa Senhora dos Remédios</option><option value="http://180graus.brasilportais.com.br/nova-santa-rita" >Nova Santa Rita</option><option value="http://180graus.brasilportais.com.br/novo-oriente" >Novo Oriente</option><option value="http://180graus.brasilportais.com.br/novo-santo-antonio" >Novo Santo Antônio</option><option value="http://180graus.brasilportais.com.br/oeiras" >Oeiras</option><option value="http://180graus.brasilportais.com.br/olho-dagua-do-piaui" >Olho d´Água do Piauí</option><option value="http://180graus.brasilportais.com.br/padre-marcos" >Padre Marcos</option><option value="http://180graus.brasilportais.com.br/paes-landim" >Paes Landim</option><option value="http://180graus.brasilportais.com.br/pajeu-do-piaui" >Pajeú do Piauí</option><option value="http://180graus.brasilportais.com.br/palmeira-do-piaui" >Palmeira do Piauí</option><option value="http://180graus.brasilportais.com.br/palmeirais" >Palmeirais</option><option value="http://180graus.brasilportais.com.br/paqueta" >Paquetá</option><option value="http://180graus.brasilportais.com.br/paraibano-ma" >Paraibano MA</option><option value="http://180graus.brasilportais.com.br/parnagua" >Parnaguá</option><option value="http://180graus.brasilportais.com.br/parnaiba" >Parnaíba</option><option value="http://180graus.brasilportais.com.br/passagem-franca" >Passagem Franca</option><option value="http://180graus.brasilportais.com.br/patos-do-piaui" >Patos do Piauí</option><option value="http://180graus.brasilportais.com.br/pau-darco" >Pau D\'arco</option><option value="http://180graus.brasilportais.com.br/paulistana" >Paulistana</option><option value="http://180graus.brasilportais.com.br/pavussu" >Pavussu</option><option value="http://180graus.brasilportais.com.br/pedro-ii" >Pedro II</option><option value="http://180graus.brasilportais.com.br/pedro-laurentino" >Pedro Laurentino</option><option value="http://180graus.brasilportais.com.br/picos" >Picos</option><option value="http://180graus.brasilportais.com.br/pimenteiras" >Pimenteiras</option><option value="http://180graus.brasilportais.com.br/pio-ix" >Pio IX</option><option value="http://180graus.brasilportais.com.br/piracuruca" >Piracuruca</option><option value="http://180graus.brasilportais.com.br/piripiri" >Piripiri</option><option value="http://180graus.brasilportais.com.br/porto" >Porto</option><option value="http://180graus.brasilportais.com.br/porto-alegre-do-piaui" >Porto Alegre do Piauí</option><option value="http://180graus.brasilportais.com.br/prata-do-piaui" >Prata do Piauí</option><option value="http://180graus.brasilportais.com.br/queimada-nova" >Queimada Nova</option><option value="http://180graus.brasilportais.com.br/queimada-nova" >Queimada Nova</option><option value="http://180graus.brasilportais.com.br/redencao-do-gurgueia" >Redenção do Gurguéia</option><option value="http://180graus.brasilportais.com.br/regeneracao" >Regeneração</option><option value="http://180graus.brasilportais.com.br/regeneracao---desativada" >Regeneração - desativada</option><option value="http://180graus.brasilportais.com.br/riacho-frio" >Riacho Frio</option><option value="http://180graus.brasilportais.com.br/ribeira-do-piaui" >Ribeira do Piauí</option><option value="http://180graus.brasilportais.com.br/ribeiro-goncalves" >Ribeiro Gonçalves</option><option value="http://180graus.brasilportais.com.br/rio-grande-do-piaui" >Rio Grande do Piauí</option><option value="http://180graus.brasilportais.com.br/santa-cruz-do-piaui" >Santa Cruz do Piauí</option><option value="http://180graus.brasilportais.com.br/santa-cruz-dos-milagres" >Santa Cruz dos Milagres</option><option value="http://180graus.brasilportais.com.br/santa-cruz-dos-milagres" >Santa Cruz dos Milagres</option><option value="http://180graus.brasilportais.com.br/santa-filomena" >Santa Filomena</option><option value="http://180graus.brasilportais.com.br/santa-luz" >Santa Luz</option><option value="http://180graus.brasilportais.com.br/santa-rosa-do-piaui" >Santa Rosa do Piauí</option><option value="http://180graus.brasilportais.com.br/santana-do-piaui" >Santana do Piauí</option><option value="http://180graus.brasilportais.com.br/santo-antonio-de-lisboa" >Santo Antonio de Lisboa</option><option value="http://180graus.brasilportais.com.br/santo-antonio-dos-milagres" >Santo Antonio dos Milagres</option><option value="http://180graus.brasilportais.com.br/santo-inacio-do-piaui" >Santo Inacio do Piauí</option><option value="http://180graus.brasilportais.com.br/sao-braz-do-piaui" >São Braz do Piauí</option><option value="http://180graus.brasilportais.com.br/sao-felix-do-piaui" >São Félix do Piauí</option><option value="http://180graus.brasilportais.com.br/sao-francisco-de-assis-do-piaui" >São Francisco de Assis do Piauí</option><option value="http://180graus.brasilportais.com.br/sao-francisco-do-piaui" >São Francisco do Piauí</option><option value="http://180graus.brasilportais.com.br/sao-goncalo-do-gurgueia" >São Gonçalo do Gurguéia</option><option value="http://180graus.brasilportais.com.br/sao-goncalo-do-piaui" >São Gonçalo do Piauí</option><option value="http://180graus.brasilportais.com.br/sao-joao-da-canabrava" >São João da Canabrava</option><option value="http://180graus.brasilportais.com.br/sao-joao-da-fronteira" >São João da Fronteira</option><option value="http://180graus.brasilportais.com.br/sao-joao-da-serra" >São João da Serra</option><option value="http://180graus.brasilportais.com.br/sao-joao-da-varjota" >São João da Varjota</option><option value="http://180graus.brasilportais.com.br/sao-joao-do-arraial" >São João do Arraial</option><option value="http://180graus.brasilportais.com.br/sao-joao-do-piaui" >São João do Piauí</option><option value="http://180graus.brasilportais.com.br/sao-jose-do-divino" >São José do Divino</option><option value="http://180graus.brasilportais.com.br/sao-jose-do-peixe" >São José do Peixe</option><option value="http://180graus.brasilportais.com.br/sao-jose-do-piaui" >São José do Piauí</option><option value="http://180graus.brasilportais.com.br/sao-juliao" >São Julião</option><option value="http://180graus.brasilportais.com.br/sao-lourenco-do-piaui" >São Lourenço do Piauí</option><option value="http://180graus.brasilportais.com.br/sao-luis-do-piaui" >São Luís do Piauí</option><option value="http://180graus.brasilportais.com.br/sao-miguel-da-baixa-grande" >São Miguel da Baixa Grande</option><option value="http://180graus.brasilportais.com.br/sao-miguel-do-fidalgo" >São Miguel do Fidalgo</option><option value="http://180graus.brasilportais.com.br/sao-miguel-do-tapuio" >São Miguel do Tapuio</option><option value="http://180graus.brasilportais.com.br/sao-pedro" >São Pedro</option><option value="http://180graus.brasilportais.com.br/sao-raimundo-nonato" >São Raimundo Nonato</option><option value="http://180graus.brasilportais.com.br/sebastiao-barros" >Sebastião Barros</option><option value="http://180graus.brasilportais.com.br/sebastiao-leal" >Sebastião Leal</option><option value="http://180graus.brasilportais.com.br/sigefredo-pacheco" >Sigefredo Pacheco</option><option value="http://180graus.brasilportais.com.br/simoes" >Simões</option><option value="http://180graus.brasilportais.com.br/simplicio-mendes" >Simplício Mendes</option><option value="http://180graus.brasilportais.com.br/socorro-do-piaui" >Socorro do Piauí</option><option value="http://180graus.brasilportais.com.br/sussuapara" >Sussuapara</option><option value="http://180graus.brasilportais.com.br/tamboril-do-piaui" >Tamboril do Piauí</option><option value="http://180graus.brasilportais.com.br/tanque-do-piaui" >Tanque do Piauí</option><option value="http://180graus.brasilportais.com.br/timon" >Timon</option><option value="http://180graus.brasilportais.com.br/uniao" >União</option><option value="http://180graus.brasilportais.com.br/urucui" >Uruçuí</option><option value="http://180graus.brasilportais.com.br/valenca" >Valença</option><option value="http://180graus.brasilportais.com.br/varzea-branca-do-piaui" >Várzea Branca do Piauí</option><option value="http://180graus.brasilportais.com.br/varzea-grande-do-piaui" >Várzea Grande do Piauí</option><option value="http://180graus.brasilportais.com.br/vera-mendes" >Vera Mendes</option><option value="http://180graus.brasilportais.com.br/vila-nova" >Vila Nova</option><option value="http://180graus.brasilportais.com.br/wall-ferraz" >Wall Ferraz</option><option value="http://180graus.brasilportais.com.br/wall-ferraz" >Wall Ferraz</option></select>
+
+  </div>
+	<div id="bp-principal">
+    <form action="/busca.php" method="get" id="formulario">
+      <a id="img_portalInt" href="http://www.brasilportais.com.br" title="Brasil Portais"> <img border="0" src="http://www.brasilportais.com.br/imgs/new_br_portais.jpg" alt="Brasil Portais"/> </a>
+      <div class="box_pesquisa">
+        <div id="box_busca" style="float:left;width:100%;"> <img class="img_google" src="http://www.brasilportais.com.br/imgs/google_img.jpg" alt="Google"/>
+          <input type="text" name="frase" id="campo_pesquisaInt"  value="Digite sua pesquisa!" />
+          <input type="button" title="Buscar" value="Buscar" id="btInt" class="botao_pesquisa"/>
+        </div>
+        <div id="escolha_busca"> <a href="#">Web</a> <a href="#">Imagens</a> <b>Pesquisar:</b>
+          <input id="graus" type="radio" checked="checked" name="tipo" value="" />
+          <label for="graus">180graus </label>
+          <input type="radio" name="tipo" value="" />
+          <label>web </label>
+        </div>
+      </div>
+</form> <script>
+			$(function(){
+				$('#campo_pesquisaInt').focus(function(){
+				$(this).val('');
+					})
+			})
+    </script>
+
+  <!-- Informacoes Colunistas -->
+  <div id="informacoes_colunista">
+        <div id="img_colunista"> <a title="Página inicial - Eleições 2010 - Daniel Silva" href="http://www.180graus.brasilportais.com.br/eleicoes-2010"><img alt="Eleições 2010 - Daniel Silva" src="http://genesis.brasilportais.com.br/webroot/img/secoes/imagem_1103e7134a.jpg"/></a></div>
+        <div id="info_colunista">
+          <div id="dados_colunista"> <span class="information">(86) 8843-8732</span><br />
+            <span class="information">danielsilvapi@gmail.com</span><br />
+            <span class="information">daniel.sylva@hotmail.com</span><br />
+          </div>
+          <div id="links_colunista">
+            <ul>
+              <li><a href="#" title="Saiba mais informa&#231;&#245;es sobre Daniel Silva">+ Informa&#231;&#245;es</a></li>
+              <li><a href="#">Regras</a></li>
+              <li><a href="http://www.orkut.com" target="_blank">Orkut</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+  
+
+  <div class="conteudo_materia">
+
+        <!-- materia-->
+        <span class="data_hora">11-08-2010 às 21:35:00</span>
+        <h2>Eleitor tem até 23 de setembro para pedir 2ªvia do título</h2>
+		
+		<!-- box imagem-->
+           			<!-- box imagem-->
+                 
+		       <div class="ads-google-234">
+		           	<script type="text/javascript"><!--
+					google_ad_client = "pub-2633567017911957";
+					/* 234x60, criado 22/03/10 */
+					google_ad_slot = "9608050144";
+					google_ad_width = 234;
+					google_ad_height = 60;
+					//-->
+					</script>
+					<script type="text/javascript"
+					src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+					</script>
+			  </div>                  
+    
+                  
+                <!-- box imagem-->
+         
+                    
+        <div id="texto_materia">
+			
+				<p style="text-align: justify;">Para votar em 3 de outubro, o eleitor que perdeu ou teve o título extraviado têm até o dia 23 de setembro para pedir uma segunda via (reimpressão) do documento, em qualquer cartório eleitoral do país. Com o objetivo de garantir o direito do voto de todos os cidadãos, em junho deste ano o Tribunal Superior Eleitoral autorizou a reimpressão até esta data, mesmo daqueles eleitores que estiverem fora do seu domicílio eleitoral. A legislação anterior previa que quem estivesse fora do seu local de votação tinha somente até 4 de agosto para pedir a segunda via do título. Só podem pedir a reimpressão os eleitores que já tinham ou pediram o título até 5 de maio deste ano, data em que foi fechado o cadastro eleitoral de 2010.<br />
+&#160;</p><br /><br/>  				
+				<div  style="text-align:center; ">
+					<a style="color:blue; text-decoration:underline; cursor:pointer; font-family:Arial,sans-serif; font-size:12px; font-weight:none;" href="http://www.180graus.brasilportais.com.br/eleicoes-2010#menu-nav" >20 últimas notas deste blog</a> - 
+					<a style="color:blue; text-decoration:underline; cursor:pointer; font-family:Arial,sans-serif; font-size:12px; font-weight:none;" href="http://www.180graus.brasilportais.com.br/comentarios">Comentários</a> - 
+					<a style="color:blue; text-decoration:underline; cursor:pointer; font-family:Arial,sans-serif; font-size:12px; font-weight:none;" href="http://www.180graus.brasilportais.com.br/cidades">Manchetes de Municípios</a>
+				</div>			
+			
+        </div>
+
+        <!-- tipo de  album 2 -->
+           </div>
+
+
+        <!-- opções da materia - votar -->
+        <div class="opcoes_materia" style="width:620px;margin:20px 0 10px 0;float:left">
+		<!-- VOTAR -->
+        <div class="votacao_int">
+
+        <div class="andamento">
+
+            <div class="num_votos">
+              <b id="votos">0</b>
+              <span>VOTOS</span>
+            </div>
+
+        </div>
+        <div class="box_votar" id="num_notas">
+              <div class="votar">
+
+                    <span class="label" id="container_notas351723">D&ecirc; sua nota:</span>
+                    <ul id="index">
+                      <li><a href="javascript:void(0)" onClick="loadresultado_materias(351723,5);">5</a></li>
+                      <li><a href="javascript:void(0)" onClick="loadresultado_materias(351723,6);">6</a></li>
+                      <li><a href="javascript:void(0)" onClick="loadresultado_materias(351723,7);">7</a></li>
+                      <li><a href="javascript:void(0)" onClick="loadresultado_materias(351723,8);">8</a></li>
+                      <li><a href="javascript:void(0)" onClick="loadresultado_materias(351723,9);">9</a></li>
+                      <li><a href="javascript:void(0)" onClick="loadresultado_materias(351723,10);">10</a></li>
+                    </ul>
+
+               </div>
+                 <div class="resultado">
+                  <span class="label">At&eacute; agora:</span>
+                  <b class="container_porcentagem">
+                    <span id="porcentagem" style="width:0%;"></span>
+                  </b>
+                 </div>
+              <div class="resultado">
+                  <span class="label">M&eacute;dia:&nbsp;&nbsp;&nbsp;<b class="media" id="media"></b></span>
+              </div>
+
+           </div>
+      </div>
+
+    <script type="text/javascript">
+
+    function loadresultado_materias(idmateria,nota)
+    {
+
+    	$("#num_notas").hide();
+
+    	$.ajax({
+
+    		method: "get",url: "../addVoto-int.php",data: "id="+idmateria+"&voto="+nota,
+    		beforeSend: function(){$("#loadingg").show();},
+    		complete: function(){ $("#loadingg").hide();},
+
+    		success: function(html)
+    		{
+
+    			$("#num_notas").html(html);
+    			$("#num_notas").show();
+
+    			var votoatual = $("#votos").html();
+    			votoatual++;
+    			$("#votos").html(votoatual);
+
+    		}
+    	});
+    }
+
+    </script>
+          <!-- OUTRAS OPÇÕES -->
+          <div class="box_menus">
+            <div class="links_materia">
+              <ul>
+                <li><a href="http://180graus.brasilportais.com.br/rss" title="Assinar Feed RSS - "><img src="http://www.brasilportais.com.br/imgs/feed.gif" alt="Assinar Feed RSS"/>RSS</a></li>
+                <li><a target="_blank" rel="nofollow" title="Versão para impressão - Eleitor tem até 23 de setembro para pedir 2ªvia do título" href="imprimir/eleitor-tem-ate-23-de-setembro-para-pedir-2avia-do-titulo-351723.html"><img src="http://www.brasilportais.com.br/imgs/imprimir.gif" alt="Imprimir"/>Imprimir</a></li>
+
+                <li><a href="javascript:void(0)"><img src="http://www.brasilportais.com.br/imgs/newsletter.gif" alt="Newsletter"/>Newsletter</a></li>
+
+                <li><a href="/enviar.php?materia_id=351723&secao=Eleições 2010&keepThis=true&TB_iframe=true&height=510&width=430" class="thickbox" title="Enviar por E-mail-Eleitor tem até 23 de setembro para pedir 2ªvia do título"><img src="http://www.brasilportais.com.br/imgs/enviar.gif" alt="Enviar"/>Enviar</a></li>
+
+                <li><a href="/indicacaodeerros.php?materia_id=351723&idsite=1&keepThis=true&TB_iframe=true&height=370&width=440" title="Indicar erro - Eleitor tem até 23 de setembro para pedir 2ªvia do título" class="thickbox"><img src="http://www.brasilportais.com.br/imgs/excluir.gif" alt="Indicar erro"/>Indicar erro</a></li>
+              </ul>
+            </div>
+            <div class="info_comentarios"> <span> <b>Coment&aacute;rios</b> </span> <span> <a title="" href="#coment">Leia(0)</a> </span> <span> <a title="Comentários"  href="/comentario.php?idsite=1&materia_id=351723&keepThis=true&TB_iframe=true&height=485&width=440" class="thickbox" title="Comentários">Comente Tamb&eacute;m</a> </span> </div>
+			             
+          </div>
+          
+           <center>
+	        <div align="center" style="margin-top:20px">
+            	
+					<script type="text/javascript">
+                    google_ad_client = "pub-7644771229839211";
+                    /* 468x60, criado 13/04/09 */
+                    google_ad_slot = "8648350624";
+                    google_ad_width = 468;
+                    google_ad_height = 60;
+                    
+                    </script>
+                    <script type="text/javascript"
+                    src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                    </script>
+                        
+            </div>
+            </center>
+                     
+        </div>
+
+  <!-- MAIS NOTÍCIAS -->
+  <div id="noticias-mais">
+      <div class="noticias-mais-cont">
+        <div>
+          <h3>+Lidas</h3>
+        </div>
+        <ul class="menu-abas-nav menu-abas-nav-border" id="lidas">
+          <li><a onClick="getMais('lidas',2245,'hoje')" href="javascript:;"  id="lidashoje">Hoje |</a></li>
+          <li><a onClick="getMais('lidas',2245,'ontem')" href="javascript:;" id="lidasontem">Ontem |</a></li>
+          <li><a onClick="getMais('lidas',2245,'semana')" href="javascript:;" id="lidassemana">Semana |</a></li>
+          <li><a onClick="getMais('lidas',2245,'mes')" href="javascript:;" id="lidasmes">Mês |</a></li>
+          <li><a onClick="getMais('lidas',2245,'geral')" href="javascript:;" id="lidasgeral">Geral</a></li>
+        </ul>
+
+         <div id="loadlidas" style="display:none"> <div style="height:278px; _height:282px; float:left; width: 100%;" id="carrega-aba-a"><img src="/imgs/ajax-loader(2).gif" class="carrega-gif"/></div> </div>
+                       <div id="contlidas">  </div>
+
+      </div>
+
+      <div class="noticias-mais-cont">
+
+        <div>
+          <h3>+Votadas</h3>
+        </div>
+        <ul class="menu-abas-nav menu-abas-nav-border" id="votadas">
+              <li><a onClick="getMais('votadas',2245,'hoje')" href="javascript:;" id="votadashoje" >Hoje |</a></li>
+              <li><a onClick="getMais('votadas',2245,'ontem')" href="javascript:;" id="votadasontem">Ontem |</a></li>
+              <li><a onClick="getMais('votadas',2245,'semana')" href="javascript:;" id="votadassemana">Semana |</a></li>
+              <li><a onClick="getMais('votadas',2245,'mes')" href="javascript:;" id="votadasmes">Mês |</a></li>
+              <li><a onClick="getMais('votadas',2245,'geral')" href="javascript:;" id="votadasgeral">Geral</a></li>
+        </ul>
+                <div id="loadvotadas" style="display:none"> <div style="height:278px; _height:282px; float:left; width: 100%;" id="carrega-aba-a"><img src="/imgs/ajax-loader(2).gif" class="carrega-gif"/></div> </div>
+                               <div id="contvotadas">  </div>
+      </div>
+      <div class="noticias-mais-cont cont-ult">
+        <div>
+          <h3>+Comentadas</h3>
+        </div>
+        <ul class="menu-abas-nav menu-abas-nav-border" id="comentadas">
+          <li><a onClick="getMais('comentadas',2245,'hoje')" href="javascript:;" id="comentadashoje">Hoje |</a></li>
+          <li><a onClick="getMais('comentadas',2245,'ontem')" href="javascript:;" id="comentadashoje">Ontem |</a></li>
+          <li><a onClick="getMais('comentadas',2245,'semana')" href="javascript:;" id="comentadashoje">Semana |</a></li>
+          <li><a onClick="getMais('comentadas',2245,'mes')" href="javascript:;" id="comentadashoje">Mês |</a></li>
+          <li><a onClick="getMais('comentadas',2245,'geral')" href="javascript:;" id="comentadashoje">Geral</a></li>
+        </ul>
+            <div id="loadcomentadas" style="display:none"> <div style="height:278px; _height:282px; float:left; width: 100%;" id="carrega-aba-a"><img src="/imgs/ajax-loader(2).gif" class="carrega-gif"/></div> </div>
+                                   <div id="contcomentadas">  </div>
+
+      </div>
+   </div>
+
+   <script>
+
+       function getMais(local,idsecao,periodo) {
+		 	$("#cont"+local).html('');
+					$("#"+local+" a").removeClass("selected");
+					$("#"+local+periodo).addClass("selected");
+
+			//	link=$(this).attr('id') ;
+				//	alert(link);
+				if(local=='votadas'){
+					var paginam = '/maisVotadasInt.php';
+					//$("#votadas a").removeClass("selected");
+				}else if(local=='lidas'){
+					var paginam = '/maisLidasInt.php';
+					//$("#lidas a").removeClass("selected");
+				}else if(local=='comentadas'){
+				var	paginam = '/maisComentadasInt.php';
+						//$("#ult a").removeClass("selected");
+				}
+				var	dados='periodo='+periodo+'&idsecao='+idsecao;
+
+							$.ajax({
+							method: "get",url: paginam,data: dados,
+							beforeSend: function(){$("#load"+local).show();},
+							complete: function(){ $("#load"+local).hide();},
+							success: function(html){
+
+
+						$("#cont"+local).html(html);
+						$("#cont"+local).show();
+
+					 }
+				 }); //close $.ajax(
+         } //close function
+
+
+      getMais('comentadas',2245,'hoje');
+      getMais('lidas',2245,'mes');
+      getMais('votadas',2245,'hoje');
+    </script>
+
+    <!--comentarios -->
+    <div class="comentarios">
+
+      <div class="titulo"><a name="coment" id="coment"></a>
+          <h2>Últimos comentários&nbsp; do site(10)</h2>
+      </div>
+
+	
+	
+      <div class="box_comentario">
+        <span class="data_ip">11-08-2010 às 23:07:30</span><br />
+        <span class="materia-tit"><b>Matéria: </b><a href="http://www.180graus.brasilportais.com.br/amarante/fim-de-semana-agitado-faltou-ate-cerveja-em-amarante-348976.html">FIM DE SEMANA AGITADO FALTOU ATÉ CERVEJA EM AMARANTE</a></span>
+        <b>De:</b>&nbsp;<b class="nome">DÉBORA MENDES S. VILARINHO</b>&nbsp;
+        <span class="data_ip">(IP - 187.41.147.115)</span><br />
+
+        <b>FIM DE SEMANA AGITADO...</b><br /><br />
+        <p class="scrap">
+			Prof. Virgilio sou fã d s/blog fico feliz pq a maioria ds matérias mostram Amarante/S.Fco,ste banho d rio q fz a alegria d tdo médio parnaiba,qualquer dia vou alugar uma canoa e fzer um passeio no rio parnaiba ou melhor entre stas duas cidades q amo.
+        </p>
+        <br />
+        <a href="/comentario.php?idsite=1&materia_id=351723&keepThis=true&TB_iframe=true&height=485&width=440" class="thickbox" title="Comentários"><img alt="" src="http://www.brasilportais.com.br/imgs/comment.jpg" />&nbsp;Comente tamb&eacute;m</a>
+      </div>
+
+	
+      <div class="box_comentario">
+        <span class="data_ip">11-08-2010 às 20:45:00</span><br />
+        <span class="materia-tit"><b>Matéria: </b><a href="http://www.180graus.brasilportais.com.br/agricolandia/parabens-aos-estudantes-de-agricolandia-351587.html">Parabéns aos estudantes de Agricolândia</a></span>
+        <b>De:</b>&nbsp;<b class="nome">Cielma Ferreria</b>&nbsp;
+        <span class="data_ip">(IP - 189.32.179.64)</span><br />
+
+        <b>Parabéns aos estudantes de Agricolândia</b><br /><br />
+        <p class="scrap">
+			Amigo Gilberto, meus parabéns pela matéria, gostaria também de parabenizar todos os estudantes de nossa cidade, principalmente a todos que foram meus alunos na Unidade Escolar João Ferry PARABÉNS, VOCÊS ESTARÃO PARA SEMPRE EM MEU CORAÇÃO.
+        </p>
+        <br />
+        <a href="/comentario.php?idsite=1&materia_id=351723&keepThis=true&TB_iframe=true&height=485&width=440" class="thickbox" title="Comentários"><img alt="" src="http://www.brasilportais.com.br/imgs/comment.jpg" />&nbsp;Comente tamb&eacute;m</a>
+      </div>
+
+	
+      <div class="box_comentario">
+        <span class="data_ip">11-08-2010 às 18:59:35</span><br />
+        <span class="materia-tit"><b>Matéria: </b><a href="http://www.180graus.brasilportais.com.br/bastidores/wilsao-ja-admite-crise-financeira-e-salarios-podem-sim-atrasar-351612.html">Wilsão já admite crise financeira e salários podem sim atrasar</a></span>
+        <b>De:</b>&nbsp;<b class="nome">leila</b>&nbsp;
+        <span class="data_ip">(IP - 187.41.173.93)</span><br />
+
+        <b>Descaso com os servidores da uespi</b><br /><br />
+        <p class="scrap">
+			sem falar do atraso do salário dos novos servidores da uespi que ja caminha para o terceiro mês e ninguém faz nada..É um descaso!!
+        </p>
+        <br />
+        <a href="/comentario.php?idsite=1&materia_id=351723&keepThis=true&TB_iframe=true&height=485&width=440" class="thickbox" title="Comentários"><img alt="" src="http://www.brasilportais.com.br/imgs/comment.jpg" />&nbsp;Comente tamb&eacute;m</a>
+      </div>
+
+	
+      <div class="box_comentario">
+        <span class="data_ip">11-08-2010 às 17:55:05</span><br />
+        <span class="materia-tit"><b>Matéria: </b><a href="http://www.180graus.brasilportais.com.br/bastidores/wilsao-ja-admite-crise-financeira-e-salarios-podem-sim-atrasar-351612.html">Wilsão já admite crise financeira e salários podem sim atrasar</a></span>
+        <b>De:</b>&nbsp;<b class="nome">FERNANDA CESAR</b>&nbsp;
+        <span class="data_ip">(IP - 200.253.181.130)</span><br />
+
+        <b>ANTÔNIO NETO PT  MENTIU ????</b><br /><br />
+        <p class="scrap">
+			O ex-sec. ANTÔNIO NETOPTsempre falou que o Estado do Piauí tinha atingido a estabilidade financeira. E agora, com o possível atraso de salários, era realmente mentiu...
+        </p>
+        <br />
+        <a href="/comentario.php?idsite=1&materia_id=351723&keepThis=true&TB_iframe=true&height=485&width=440" class="thickbox" title="Comentários"><img alt="" src="http://www.brasilportais.com.br/imgs/comment.jpg" />&nbsp;Comente tamb&eacute;m</a>
+      </div>
+
+	
+      <div class="box_comentario">
+        <span class="data_ip">11-08-2010 às 17:45:32</span><br />
+        <span class="materia-tit"><b>Matéria: </b><a href="http://www.180graus.brasilportais.com.br/oeiras/carnaval-2011-do-bloco-boka-loka-e-escolha-do-garoto-e-garota-351219.html">Carnaval 2011 do Bloco Boka Loka e escolha do Garoto e Garota</a></span>
+        <b>De:</b>&nbsp;<b class="nome">Adimirador do Bloco boka loka.</b>&nbsp;
+        <span class="data_ip">(IP - 187.41.92.4)</span><br />
+
+        <b>Boto fé nos meninos.</b><br /><br />
+        <p class="scrap">
+			Esses meninos do bloco boka loka,  estam de parabéns porq tam fazendo de tudo pra melhorar o carnaval dessa ciade.!!!!!!!!!!!!
+        </p>
+        <br />
+        <a href="/comentario.php?idsite=1&materia_id=351723&keepThis=true&TB_iframe=true&height=485&width=440" class="thickbox" title="Comentários"><img alt="" src="http://www.brasilportais.com.br/imgs/comment.jpg" />&nbsp;Comente tamb&eacute;m</a>
+      </div>
+
+	
+      <div class="box_comentario">
+        <span class="data_ip">11-08-2010 às 17:42:19</span><br />
+        <span class="materia-tit"><b>Matéria: </b><a href="http://www.180graus.brasilportais.com.br/bastidores/wilsao-ja-admite-crise-financeira-e-salarios-podem-sim-atrasar-351612.html">Wilsão já admite crise financeira e salários podem sim atrasar</a></span>
+        <b>De:</b>&nbsp;<b class="nome">hobed carvalho</b>&nbsp;
+        <span class="data_ip">(IP - 187.12.243.250)</span><br />
+
+        <b>atraso de lario</b><br /><br />
+        <p class="scrap">
+			Estava demorando!
+        </p>
+        <br />
+        <a href="/comentario.php?idsite=1&materia_id=351723&keepThis=true&TB_iframe=true&height=485&width=440" class="thickbox" title="Comentários"><img alt="" src="http://www.brasilportais.com.br/imgs/comment.jpg" />&nbsp;Comente tamb&eacute;m</a>
+      </div>
+
+	
+      <div class="box_comentario">
+        <span class="data_ip">11-08-2010 às 17:24:06</span><br />
+        <span class="materia-tit"><b>Matéria: </b><a href="http://www.180graus.brasilportais.com.br/politica/elmano-e-wilsao-herdam-de-silvio-e-w-dias-grande-crise-financeira-351634.html">Elmano e Wilsão herdam de Silvio e W. Dias grande crise financeira</a></span>
+        <b>De:</b>&nbsp;<b class="nome">LEAL SOBRINHO</b>&nbsp;
+        <span class="data_ip">(IP - 187.76.154.42)</span><br />
+
+        <b>Inveja do colunista</b><br /><br />
+        <p class="scrap">
+			O sr. colunista, nunca gostou do Sr. Wellington Dias, tal vez porque se acha muito inteligente e não consegue chegar a lugar nenhum, até se candidatar a conselheiro do TCE, ele já se candidatou e não foi, esse ZÓZIMO, é idiota, fica fazendo comentários bestas e jogando pedra em quem ele não gosta.
+        </p>
+        <br />
+        <a href="/comentario.php?idsite=1&materia_id=351723&keepThis=true&TB_iframe=true&height=485&width=440" class="thickbox" title="Comentários"><img alt="" src="http://www.brasilportais.com.br/imgs/comment.jpg" />&nbsp;Comente tamb&eacute;m</a>
+      </div>
+
+	
+      <div class="box_comentario">
+        <span class="data_ip">11-08-2010 às 16:23:07</span><br />
+        <span class="materia-tit"><b>Matéria: </b><a href="http://www.180graus.brasilportais.com.br/agricolandia/parabens-aos-estudantes-de-agricolandia-351587.html">Parabéns aos estudantes de Agricolândia</a></span>
+        <b>De:</b>&nbsp;<b class="nome">Janaina  Silva</b>&nbsp;
+        <span class="data_ip">(IP - 200.151.190.122)</span><br />
+
+        <b>Abra seus olhos</b><br /><br />
+        <p class="scrap">
+			Caro Francisco  se ta achando que Agricolândia não avançou francamente ou você é cego ou é alucinado, uma cidade que antes não tinha nem Ensino Médio,e agora tem até faculdade,vc acha que cidade vai bancar onibus para entidades particulares?
+        </p>
+        <br />
+        <a href="/comentario.php?idsite=1&materia_id=351723&keepThis=true&TB_iframe=true&height=485&width=440" class="thickbox" title="Comentários"><img alt="" src="http://www.brasilportais.com.br/imgs/comment.jpg" />&nbsp;Comente tamb&eacute;m</a>
+      </div>
+
+	
+      <div class="box_comentario">
+        <span class="data_ip">11-08-2010 às 16:20:57</span><br />
+        <span class="materia-tit"><b>Matéria: </b><a href="http://www.180graus.brasilportais.com.br/gospel/cantora-lydia-moises-lanca-seu-novo-cd-223634.html">CANTORA LYDIA MOISÉS LANÇA SEU NOVO CD</a></span>
+        <b>De:</b>&nbsp;<b class="nome">SUMAIRA SUELE PINHEIRO MACIEL</b>&nbsp;
+        <span class="data_ip">(IP - 170.66.1.236)</span><br />
+
+        <b>LYDIA MOISÃ‰S TE AGRADEÃ‡O PELA SUA MUSICA.</b><br /><br />
+        <p class="scrap">
+			COMO EU DISSE SUA MUSICA FEZ SENTINDO EM MINHA VIDA.OLHA NADA HÃ MELHOR PARA O HOMEM DO QUE COMER ,BEBER E FAZER QUE A SUA ALMA GOZE O BEM DO SEU TRABALHO.NO ENTANTO,VI TAMBEM QUE ISTO VEM DA MÃƒO DE DEUS ,POIS , SEPARADO DESTE,QUEM PODE COMER OU QUEM PODE ALEGRAR-SE?NÃƒO E VERDADE DEUS SEJAIS CONTIGO
+        </p>
+        <br />
+        <a href="/comentario.php?idsite=1&materia_id=351723&keepThis=true&TB_iframe=true&height=485&width=440" class="thickbox" title="Comentários"><img alt="" src="http://www.brasilportais.com.br/imgs/comment.jpg" />&nbsp;Comente tamb&eacute;m</a>
+      </div>
+
+	
+      <div class="box_comentario">
+        <span class="data_ip">11-08-2010 às 16:20:42</span><br />
+        <span class="materia-tit"><b>Matéria: </b><a href="http://www.180graus.brasilportais.com.br/santa-filomena/balneario-atalaia-corre-perigo-nossa-comunidade-precisa-agir-350936.html">Balneário Atalaia corre perigo, Nossa comunidade precisa agir</a></span>
+        <b>De:</b>&nbsp;<b class="nome">Nilson Adress</b>&nbsp;
+        <span class="data_ip">(IP - 201.4.1.29)</span><br />
+
+        <b>Não deixem morrer esta riquesa natural</b><br /><br />
+        <p class="scrap">
+			A sociedade especialmente precisa agir o mais rápido possivel.
+        </p>
+        <br />
+        <a href="/comentario.php?idsite=1&materia_id=351723&keepThis=true&TB_iframe=true&height=485&width=440" class="thickbox" title="Comentários"><img alt="" src="http://www.brasilportais.com.br/imgs/comment.jpg" />&nbsp;Comente tamb&eacute;m</a>
+      </div>
+
+	
+
+	<!-- FORMULARIO DE COMENTARIOS -->
+	<div id="mostraFormulario">
+		  
+    <!-- formulario comentar-->
+    <div id="box_comentar_materia">
+       <form onsubmit="return carregaFormulario(); " method="get" id="comentar_materia" >
+       <fieldset>
+                  <b id="info">DEIXE SEU COMENT&Aacute;RIO</b>
+                      <label for="nome">Nome:</label>
+                      <input type="text" id="nome" value="" name="nome"/>
+					  <input name="nomeT" type="hidden" disabled class="input_caracteres" id="nomeT" value="30" size="3" style="width:20px" />
+                      <span></span>
+                      
+                      <label for="email">E-mail:</label>
+                      <input type="text" id="email" value="" name="email"/>
+					  <input name="emailT" type="hidden" disabled class="input_caracteres" id="emailT" value="30" size="3" style="width:20px" />
+         			  <span></span>
+                      
+                      <label for="estado">Estado:</label>
+                      <select name="estado" class="text" onchange="carregaCidade()" id="estado"><option value=""></option><option value=1 >AC</option><option value=2 >AL</option><option value=3 >AP</option><option value=4 >AM</option><option value=5 >BA</option><option value=6 >CE</option><option value=7 >DF</option><option value=8 >ES</option><option value=9 >GO</option><option value=10 >MA</option><option value=11 >MT</option><option value=12 >MS</option><option value=13 >MG</option><option value=14 >PA</option><option value=15 >PB</option><option value=16 >PR</option><option value=17 >PE</option><option value=18 >PI</option><option value=19 >RJ</option><option value=20 >RN</option><option value=21 >RS</option><option value=22 >RO</option><option value=23 >RR</option><option value=24 >SC</option><option value=25 >SP</option><option value=26 >SE</option><option value=27 >TO</option></select>
+                      <span></span>
+
+                        <label for="cidade">Cidade:</label>
+						
+						<span id="mostraCidade">
+                        <select id="cidade" class="text" title="Informe a sua cidade." disabled="" name="cidade">
+                        	<option value="0"> Selecione </option>
+                        </select>                        
+                        </span>
+                        
+                        <div id="carregaCidade">
+                        <select id="cidade" class="text" title="Informe a sua cidade." disabled="" name="cidade">
+                        	<option value="0"> Carregando.. </option>
+                        </select>
+                        </div>
+						                      
+                      <label for="email">Titulo:</label>
+                      <input type="text" id="titulo" value="" name="titulo"/><br/>
+					  <input name="tituloT" type="hidden" disabled class="input_caracteres" id="tituloT" value="30" size="3" style="width:20px" />
+                      <span></span>
+                      
+                      <label for="comentario">Coment&aacute;rio:</label>
+                      <textarea id="comentario" name="comentario" onKeyup="ContaCaracteresCampo('comentario', 'comentarioT', 300);"></textarea><br/>
+					  <input name="comentarioT" type="hidden" disabled class="input_caracteres" id="comentarioT" value="30" size="3" style="width:20px" />
+                      <span></span>
+					  
+                      <input type="submit" class="botao_formulario" value="Enviar Comentário" />
+                      <input type="reset" class="botao_formulario" value="Limpar Dados" />
+					  <input name="materia_id" id="materia_id" type="hidden" value="351723"/>
+</fieldset></form></div>
+ 
+  
+  
+  <script>
+  	$("#carregaCidade").hide();
+  </script>	</div>
+
+      <!-- fim -->
+    </div>
+
+
+<script type="text/javascript">
+function ContaCaracteresCampo(c1, c2, quantidade)
+{
+   intCaracteres = quantidade - document.getElementById(''+c1+'').value.length;
+   if (intCaracteres > 0) {
+	  document.getElementById(''+c2+'').value = intCaracteres;
+	  return true;
+   }
+   else
+   {
+	  document.getElementById(''+c2+'').value= 0;
+	  document.getElementById(''+c1+'').value = document.getElementById(''+c1+'').value.substr(0,quantidade)
+	  return false;
+   }
+}
+
+function carregaCidade() {
+var idestado;
+
+$("#mostraCidade").hide();
+
+idestado=$("#estado").val();
+
+	$.ajax({
+
+	method: "get",url: "/mostra-cidade.php",data: "id="+idestado,
+
+	beforeSend: function(){$("#carregaCidade").show();},
+
+	complete: function(){ $("#carregaCidade").hide();},
+
+	success: function(html){
+
+$("#mostraCidade").html('');
+
+$("#mostraCidade").html(html);
+
+$("#mostraCidade").show();
+
+
+}
+
+}); //close $.ajax(
+
+} //close function
+
+function carregaFormulario() {
+
+
+	//$("#mostraFormulario").hide();
+
+		//idestado=$("#estado").val();
+
+			var nome 		= $("#nome").val();
+			var email		= $("#email").val();
+			var estado		= $("#estado").val();
+			var cidade		= $("#cidadeId").val();
+			var titulo		= $("#titulo").val();
+			var comentario	= $("#comentario").val();
+			var materia_id	= $("#materia_id").val();
+
+			/*alert(nome+" "+email+" "+estado+" "+cidade+" "+titulo+" "+comentario+" "+materia_id);*/
+
+			$.ajax({
+
+				method: "get",
+
+				url: "/carregaFormularioComentario.php",
+
+				data: "materia_id="+materia_id+"&nome="+nome+"&email="+email+"&estado="+estado+"&cidade="+cidade+"&titulo="+titulo+"&comentario="+comentario,
+
+				//beforeSend: function(){$("#carregaFormulario").show();},
+
+				//complete: function(){ $("#carregaFormulario").hide();},
+
+				success: function(html)
+				{
+					$("#mostraFormulario").html('');
+
+					$("#mostraFormulario").html(html);
+
+					$("#mostraFormulario").show();
+
+				}
+
+		}); //close $.ajax
+
+	return false;
+
+}
+
+
+$("#carregaCidade").hide();
+$("#carregaFormulario").hide();
+
+</script>
+
+
+    <!--comentarios de ourtras seções -->
+    <div class="comentarios">
+
+        <div class="titulo">
+            <h2>Comentários de outras Matérias()</h2>
+        </div>
+
+  	
+  	  <div class="show_comentarios">
+  		<h3 class="empty">Nenhum comentário até o momento!</h3>
+  	  </div>
+
+  	</div>
+
+</div>  <!-- FIM DA PRINCIPAL -->	<div id="bp-lateral">
+
+	<div>
+		<embed src="http://180graus.brasilportais.com.br/imgs/_java_terra_195x40_radiobradesco_100607.swf" flashvars="clicktag=http://www.bradescoradio.com.br" quality="autohigh" name="flashad" swliveconnect="TRUE" 
+allowscriptaccess="always" wmode="opaque" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" height="40" width="195">
+	</div><br/>
+
+ <div class="abas-cont abas-margin">
+      <ul class="menu-abas">
+        <li><a class="selected" href="/enquetes">Enquete</a></li>
+      </ul>
+      <div class="conteudo-aba aba-enquete">
+        <p>De 0 a 10, que nota você dá para o programa Ronda Cidadão, que já está há três meses em funcionamento em Teresina?<a id="linke" class="thickbox"></a></p>
+        <form method="post"  id="enquete">
+        <input type="hidden" value="1297" id="idenq" name="idenq">
+          <fieldset>
+        					 <input type="radio" class="alinha_radio" value="6068" name="opcao" />
+                     <label  name="enquete">Dou nota 00</label>               
+        					 <input type="radio" class="alinha_radio" value="6069" name="opcao" />
+                     <label  name="enquete">Dou nota 01</label>               
+        					 <input type="radio" class="alinha_radio" value="6070" name="opcao" />
+                     <label  name="enquete">Dou nota 02</label>               
+        					 <input type="radio" class="alinha_radio" value="6071" name="opcao" />
+                     <label  name="enquete">Dou nota 03</label>               
+        					 <input type="radio" class="alinha_radio" value="6072" name="opcao" />
+                     <label  name="enquete">Dou nota 04</label>               
+        					 <input type="radio" class="alinha_radio" value="6073" name="opcao" />
+                     <label  name="enquete">Dou nota 05</label>               
+        					 <input type="radio" class="alinha_radio" value="6074" name="opcao" />
+                     <label  name="enquete">Dou nota 06</label>               
+        					 <input type="radio" class="alinha_radio" value="6075" name="opcao" />
+                     <label  name="enquete">Dou nota 07</label>               
+        					 <input type="radio" class="alinha_radio" value="6076" name="opcao" />
+                     <label  name="enquete">Dou nota 08</label>               
+        					 <input type="radio" class="alinha_radio" value="6077" name="opcao" />
+                     <label  name="enquete">Dou nota 09</label>               
+        					 <input type="radio" class="alinha_radio" value="6078" name="opcao" />
+                     <label  name="enquete">Dou nota 10</label>               
+        					 <input type="radio" class="alinha_radio" value="6079" name="opcao" />
+                     <label  name="enquete">Nem sabia que estava funcionando</label>               
+        					 <input type="radio" class="alinha_radio" value="6080" name="opcao" />
+                     <label  name="enquete">Prefiro não opinar</label>               
+                  <input type="button" id="votar-enquete" onclick="votar()"  name="votar-enquete" value="Votar" title="DÃª sua opiniÃ£o" />
+          <input type="button" id="resultado-enquete" onclick="resultado()" name="resultado-enquete" value="Resultado" title="Veja o resultado desta enquete" />
+          </fieldset>
+        </form>
+        <span class="botao-acesso"><a  href="/sugerir_enquete.php?keepThis=true&TB_iframe=true&height=450&width=460" class="thickbox">Sugerir enquete</a></span>   
+    </div>
+    </div>
+
+
+   <div class="tv-bp">
+    <a href="/videos"><img alt="TV" src="/images/180graus_logo_tv.jpg" /></a>
+      <object width="200" height="168"><param name="movie" value="http://www.youtube.com/v/JPn4yVS-qas&amp;hl=pt_BR&"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/JPn4yVS-qas&amp;hl=pt_BR&" type="application/x-shockwave-flash" wmode="transparent" width="200" height="168"></embed></object>    </div>
+   
+  
+    <div class="banner-vitrine" id="banner_quadrado1">
+
+   
+           <script> 
+			
+					
+										  if(navigator.appVersion.indexOf("MSIE")!= -1){
+													var temp = navigator.appVersion.split("MSIE");
+													var versao = parseFloat(temp[1]);
+													if(versao==6){
+																//ajax da pagina
+																$("#banner_quadrado1").html('');
+																$("#banner_quadrado1").css("height","200px");
+																$("#banner_quadrado1").css("width","200px");
+																
+
+																$("#banner_quadrado1").load("/banner-quadrado.php?tipo=6&secao=2245");	
+																
+													}else{
+														timeQ1(1);
+													}
+										  }else{
+										 		timeQ1(1);
+										  }
+										
+										
+
+        </script> 
+
+            </div>
+       
+    <div class="banner-vitrine" id="banner_quadrado2">
+
+    <!--BANNER 01-->
+            <script> 	
+					
+										
+										  if(navigator.appVersion.indexOf("MSIE")!= -1){
+													var temp = navigator.appVersion.split("MSIE");
+													var versao = parseFloat(temp[1]);
+													if(versao==6){
+																//ajax da pagina
+																$("#banner_quadrado2").html('');
+																$("#banner_quadrado2").css("height","200px");
+																$("#banner_quadrado2").css("width","200px");
+																$("#banner_quadrado2").css("margin-top","20px");
+																$("#banner_quadrado2").load("/banner-quadrado.php?tipo=7&secao=2245");	
+													}else{
+														timeQ2(1);
+													}
+										  }else{
+										 		timeQ2(1);
+										  }
+										
+								
+        </script> 
+
+    </div>
+
+     <div class="banner-vitrine" id="banner_quadrado3" style="margin-bottom:20px;">
+
+    
+             <script> 
+		
+					
+										
+										  if(navigator.appVersion.indexOf("MSIE")!= -1){
+													var temp = navigator.appVersion.split("MSIE");
+													var versao = parseFloat(temp[1]);
+													if(versao==6){
+																//ajax da pagina
+																$("#banner_quadrado3").html('');
+																$("#banner_quadrado3").css("height","200px");
+																$("#banner_quadrado3").css("width","200px");
+																$("#banner_quadrado3").css("margin-top","20px");
+																$("#banner_quadrado3").load("/banner-quadrado.php?tipo=8&secao=2245");	
+													}else{
+														timeQ3(1);
+													}
+										  }else{
+										 		timeQ3(1);
+										  }
+										
+										
+			
+        </script> 
+
+   
+    </div>
+   
+   
+   
+    
+    
+    <script>
+function votar(){
+		var $link = $('#linke');
+        //var href = $link.attr('href');
+	
+		var validado = false;
+		var tamanho;
+		var id_alternativa;
+		//id_alternativa=$('input[name=opcao]').attr('checked','checked');
+		
+		
+		
+		tamanho = $(document.getElementsByName("opcao")).length;
+		for (var i=0;i<tamanho;i++)  {
+		if($(document.getElementsByName("opcao"))[i].checked) {
+				id_alternativa = $(document.getElementsByName("opcao"))[i].value;
+				validado=true;
+				//tb_show("Enquete","votar.php?idalt="+id_alternativa+"&height=120&width=400","images/cart.jpg");
+				//altera o href do link q tem id=link	
+			$link.attr('href',"/votar_enquete.php?idalt="+id_alternativa+"&keepThis=true&TB_iframe=true&height=490&width=400");
+				//$("#principal").click();
+				$("#linke").click();
+		
+			}
+		}
+		
+		if(!validado) {
+			alert("Escolha uma alternativa!");
+			return false;
+		}
+		
+	}//fim votar
+	
+	function resultado(){
+		var $link = $('#linke');
+ 		var id_enquete = $("#idenq").val();
+		$link.attr('href',"/resultado_enquete.php?idenq="+id_enquete+"&votar=0&keepThis=true&TB_iframe=true&height=500&width=450");
+		$("#linke").click();
+	}
+
+</script>
+
+     <div id="adsense160x600" style="margin:20px auto;text-align:center;width:100%;float:left;">
+		  
+		<script type="text/javascript"><!--
+        google_ad_client = "pub-7644771229839211";
+        /* 160x600, Torre_180graus */
+        google_ad_slot = "2442238447";
+        google_ad_width = 160;
+        google_ad_height = 600;
+        //-->
+        </script>
+        <script type="text/javascript"
+        src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+        </script>
+
+	  </div>
+
+     <div class="abas-cont">
+      <ul class="menu-abas">
+        <li><a class="selected" href="#" >Classificados</a></li>
+      </ul>
+      <div class="conteudo-aba aba-classificados" id="aba-classificados">
+      
+      
+        <ul class="menu-abas-nav" id="link_categorias">
+          <li><a class="selected" href="javascript:;" id="linkCA1" onclick="classificados('linkCA1');">Geral</a></li> 
+          		 <li> | <a href="javascript:;"  id="linkCA2" onclick="classificados('linkCA2');"> Veículos</a></li>
+					 <li> | <a href="javascript:;"  id="linkCA3" onclick="classificados('linkCA3');"> Imóveis</a></li>
+					 <li> | <a href="javascript:;"  id="linkCA4" onclick="classificados('linkCA4');"> Empregos</a></li>
+			        </ul>
+                <div id="carrega_classificados" style="display:none;height:278px; _height:280px; float:left; width: 100%;">
+					<img src="/imgs/ajax-loader(2).gif" class="carrega-gif"/>
+                </div>
+        <ul class="lista-classificados">
+        
+                 
+                            <div id="troca_classificados">
+                            </div>
+   				 
+                 
+                 
+        </ul>
+        <br />
+
+<a href="" id="idcat"></a>
+
+
+  <span class="botao-acesso"><a href="/cadastra_classificados.php?keepThis=true&TB_iframe=true&height=490&width=440" class="thickbox">Cadastrar an&uacute;ncio</a></span>   
+</div>
+          </div>
+
+		  
+		  
+    </div>
+
+<script>
+function classificados(cat_id) {
+			//var cat_id = $(this).attr('id') ;
+					var teste;
+				$("#link_categorias a").removeClass("selected");
+						$("#"+cat_id).addClass("selected");
+						$("#troca_classificados").html('');
+				
+				
+				$.ajax({
+				url: "/carregaCategoriasClassificados.php?idcat="+cat_id+"&idsecao=2245",
+				beforeSend: function(){$("#carrega_classificados").show();},
+				complete: function(){ $("#carrega_classificados").hide();}, 
+				success: function(html){
+					$("#troca_classificados").html("");
+					$("#troca_classificados").append(html);
+					//$("#troca_classificados").css({'display' : 'block', 'z-index' : '10'});
+				}
+		});
+		}
+		
+		
+
+// selecionar 
+//var num = rand(1,4);
+function aleatorio(inferior,superior){
+    numPossibilidades = superior - inferior
+    aleat = Math.random() * numPossibilidades
+    aleat = Math.floor(aleat)
+    return parseInt(inferior) + aleat
+} 
+
+var na=aleatorio(1,4)
+classificados('linkCA'+na);
+
+function paginaCla(cat_id,pag){
+			
+				$("#troca_classificados").html("");
+				$.ajax({
+								method: "get",url: "/carregaCategoriasClassificados.php",data: "idcat="+cat_id+"&pageID="+pag+"&idsecao=2245",
+								dataType: "html",
+								beforeSend: function(){$("#carrega_classificados").show();}, 
+								complete: function(){ $("#carrega_classificados").hide();}, 
+								success: function(html){ 
+											$("#troca_classificados").html("");
+											$("#troca_classificados").append(html);
+											//$("#troca_classificadosPag").show();
+							 }
+						 }); //close $.ajax(
+				
+	
+		}
+
+
+
+
+</script>  </div>
+<div id="bp-rodape">
+    <div id="cont-rodape">
+  <ul id="menu-rodape">
+ <li><a href="#">Tornar página inicial |</a></li>
+ <li><a href="#">Incluir nos favoritos |</a></li>
+ <li><a href="#">Anuncie |</a></li>
+ <li><a href="#">Arquivos Home Page |</a></li>
+ <li><a href="#">Denuncie |</a></li>
+ <li><a href="http://www.trabalheno180graus.com.br">Trabalhe conosco |</a></li>
+ <li><a href="#">Sobre o BrasilPortais |</a></li>
+ <li><a href="#">Seja franqueado |</a></li>
+ <li><a href="http://dihitt.com.br?ref=99444" dihitt_check="a76fe4d142f8267f78eeafa7e3fc673c">diHITT - Notícias |</a></li>
+ <li><a href='http://blogblogs.com.br/api/claim/607902842/224041/161834' rel='me'> BlogBlogs</a></li>
+ </ul>
+  <ul class="list_responsible">
+      <li> <a href="#" class="info"><b>Editor Chefe<br style="display: block;"/>
+        </b> Allisson Paixão <span> <img src="/imgs/rodape_allisson.jpg"  border=no width="254"alt="Allisson Paixão" style="float:left;"> </span> </a> </li>
+      <li> <span> <a class="info" href="#"><b>Gerente de Vendas<br style="display: block;"/>
+      </b> Lorenna Ribeiro <span> <img src="/imgs/rodape_lorenna.jpg"  border=no width="254"alt="Lorenna Ribeiro" style="float:left;"> </span> </a> </span></li>
+      
+           
+      <li> <a class="info" href="#"><b>Gerente Administrativo<br style="display: block;"/>
+      </b> Livia Sales <span> <img src="/imgs/rodape_livia.jpg"  border=no width="254"alt="Livia Sales" style="float:left;"> </span> </a> </li>
+      <li> <a class="info" href="#"><b>Gerente de Tecnologia </b><br style="display: block;"/>
+      Hielbert Ferreira <span> <img src="/imgs/rodape_hielbert.jpg"  border=no width="254"alt="Hielbert Ferreira" style="float:left;"> </span> </a> </li>
+      <li> <a href="#" class="info"><b>Assessor Jurídico</b><br style="display: block;"/>
+      Diego Ferreira <span> <img src="/imgs/rodape_diego_ferreira.jpg"  border=no width="254"alt="Diego Ferreira" style="float:left;"> </span> </a> </li>
+      <li> <a href="#" class="info"><b>Assessor Tributário</b> <br style="display: block;"/>
+      Genivaldo Sousa <span> <img src="/imgs/rodape_genivaldo.jpg"  border=no width="254"alt="Genivaldo Sousa" style="float:left;"> </span> </a> </li>
+      
+     
+  </ul>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-4080932-2");
+pageTracker._trackPageview();
+} catch(err) {}</script></div>
+<script src='http://ads3814.hotwords.com.br/show.jsp?id=3814'></script>
+<!-- google_ad_section_end -->
+</body>
+
+  <script type="text/javascript" src="/webroot/js/funcoes.js"></script>
+
+</html>

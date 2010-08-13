@@ -1,0 +1,53 @@
+<mockup version="1.0" skin="sketch" measuredW="1030" measuredH="819" mockupW="860" mockupH="809">
+  <controls>
+    <control controlID="7" controlTypeID="__group__" x="160" y="56" w="-1" h="-1" measuredW="674" measuredH="598" zOrder="0" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Accordion" x="0" y="0" w="674" h="598" measuredW="374" measuredH="201" zOrder="0" locked="false" isInGroup="7">
+          <controlProperties>
+            <selectedIndex>1</selectedIndex>
+            <text>QUALIX%20permanecer%E1%20fazendo%20coleta%20do%20lixo%20urbano%20em%20THE%0AE%20%E9%20na%20TV%20Globo%20do%20Piau%ED%0AEnvolve%20mais%20autoridades</text>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::TextArea" x="16" y="101" w="647" h="453" measuredW="200" measuredH="140" zOrder="1" locked="false" isInGroup="7">
+          <controlProperties>
+            <text>O%20governo%20do%20Estado%20continua%20em%20d%E9bito%20com%20a%20TV%20Clube.%20O%20dono%20da%20emissora%2C%20Segisnando%20Alencar%2C%20afirmou%20que%20apenas%20metade%20da%20pend%EAncia%20que%20a%20Coordenadoria%20de%20Comunica%E7%E3o%20tem%20com%20a%20empresa%2C%20referente%20%E0%20veicula%E7%E3o%20de%20m%EDdia%2C%20foi%20quitada.%20De%20acordo%20com%20ele%2C%20a%20CCOM%20alega%20falta%20de%20dinheiro%20sob%20o%20argumento%20de%20que%20a%20Secretaria%20de%20Finan%E7as%20n%E3o%20teria%20feito%20o%20repasse%20de%20recursos%20para%20o%20%F3rg%E3o.%0A%20%0AAinda%20segundo%20Segisnando%2C%20a%20CCOM%20garantiu%20o%20pagamento%20de%20cerca%20de%20100%20mil%20reais%20ainda%20nesta%20semana.%20%u201CEles%20prometeram%20pagar%20por%20m%EAs.%20J%E1%20repassaram%20cinq%FCenta%20por%20cento%20do%20valor%2C%20mas%20aguardamos%20que%20cumpram%20os%20compromissos%u201D%2C%20conta%20o%20dono%20da%20TV%20Clube.%20O%20pagamento%20depende%20somente%20da%20folha%20de%20pagamentos%2C%20que%20tinha%20sido%20fechada.%0A%20%0AAparentemente%2C%20a%20emissora%20demonstrou%20uma%20rea%E7%E3o%20ao%20d%E9bito.%20%C9%20que%20na%20ter%E7a-feira%20passada%20%2810%29%2C%20o%20Piau%ED%20TV%202%AA%20edi%E7%E3o%20exibiu%20uma%20reportagem%20sobre%20a%20paralisa%E7%E3o%20nas%20obras%20do%20Centro%20de%20Conven%E7%F5es%20%28mat%E9ria%20repercutida%20ap%F3s%20o%20180graus%20ter%20entrado%20na%20obra%20parada%29.%20Por%E9m%2C%20o%20dono%20da%20Globo%20local%20nega%20que%20a%20emissora%20siga%20tal%20linha%20editorial.%20%u201CAs%20coisas%20n%E3o%20s%E3o%20misturadas.%20O%20jornalismo%20n%E3o%20%E9%20cobrado.%20Por%20isso%2C%20n%E3o%20%E9%20feita%20mat%E9ria%20para%20bater%20no%20governo%u201D%2C%20sustenta%2C%20Dr.%20Siza%2C%20como%20%E9%20conhecido.%20A%20TV%20chegou%20a%20exibir%20ainda%20uma%20reportagem%20sobre%20d%EDvida%20do%20Detran%20que%20obrigou%20o%20%F3rg%E3o%20a%20suspender%20a%20emiss%E3o%20de%20CNHs.%0A%20%0AO%20180graus%20repercutiu%20a%20pend%EAncia%20do%20Governo%2C%20que%20chegou%20a%20representar%20uma%20amea%E7a%20ao%20programa%20de%20policiamento%20Ronda%20Cidad%E3o.%20Poucos%20dias%20depois%2C%20o%20Governo%20do%20Estado%20come%E7ou%20a%20liberar%20algumas%20parcelas%20do%20dinheiro%20%E0%20TV%20Clube.%20O%20Maior%20Portal%20do%20Piau%ED%20tamb%E9m%20publicou%20mat%E9ria%20sobre%20as%20condi%E7%F5es%20do%20Centro%20de%20Conven%E7%F5es%20e%20suas%20in%FAmeras%20paralisa%E7%F5es.%20A%20informa%E7%E3o%20que%20o%20180graus%20diz%20que%20existem%20pend%EAncias%20do%20Governo%20com%20outros%20ve%EDculos%20de%20comunica%E7%E3o.%20O%20coordenador%20estadual%20de%20Comunica%E7%E3o%20Fenelon%20Rocha%2C%20procurado%20para%20falar%20sobre%20o%20assunto%20em%20outra%20ocasi%E3o%2C%20disse%20que%20n%E3o%20se%20pronuncia%20mais%20sobre%20a%20quest%E3o.</text>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="__group__" x="16" y="65" w="-1" h="-1" measuredW="647" measuredH="36" zOrder="2" locked="false" isInGroup="7">
+          <groupChildrenDescriptors>
+            <control controlID="0" controlTypeID="com.balsamiq.mockups::TextArea" x="0" y="0" w="647" h="36" measuredW="200" measuredH="140" zOrder="0" locked="false" isInGroup="2">
+              <controlProperties>
+                <text/>
+              </controlProperties>
+            </control>
+            <control controlID="1" controlTypeID="com.balsamiq.mockups::LinkBar" x="9" y="6" w="-1" h="-1" measuredW="623" measuredH="23" zOrder="1" locked="false" isInGroup="2">
+              <controlProperties>
+                <text>180%20Graus%20-%20http%3A//180graus.brasilportais.com%2C%20Veja%20o%20artigo%20original%2C%20Publicado%20no%20dia%2013/08/2010</text>
+              </controlProperties>
+            </control>
+          </groupChildrenDescriptors>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Title" x="397" y="0" w="-1" h="-1" measuredW="200" measuredH="56" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Piau%ED%20News</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::TextArea" x="160" y="669" w="674" h="140" measuredW="200" measuredH="140" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::LinkBar" x="378" y="727" w="-1" h="-1" measuredW="238" measuredH="23" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Sobre%2C%20Divulgue%2C%20Sigua%20no%20Twitter</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::VCurly" x="840" y="85" w="180" h="539" measuredW="180" measuredH="140" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Esta%20parte%20%E9%20a%20mesma%20do%20show%20E%20principalmente%2C%20vai%20em%20cache.</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

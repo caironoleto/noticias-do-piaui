@@ -19,6 +19,13 @@ Spec::Runner.configure do |config|
   config.use_transactional_fixtures = true
   config.use_instantiated_fixtures  = false
   config.fixture_path = RAILS_ROOT + '/spec/fixtures/'
+  config.before(:each) do
+    Delayed::Backend::ActiveRecord::Job.delete_all
+  end
+
+  config.after(:each) do
+    Delayed::Backend::ActiveRecord::Job.delete_all
+  end
 
   # == Fixtures
   #

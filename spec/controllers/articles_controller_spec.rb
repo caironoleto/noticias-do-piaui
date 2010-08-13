@@ -1,0 +1,39 @@
+require 'spec_helper'
+
+describe ArticlesController do
+  def mock_article(stubs = {})
+    @mock_article ||= mock_model(Article, stubs)
+  end
+
+  context 'GET index' do
+    describe 'responding to GET index' do
+      it 'should expose articles as @articles' do
+        Article.should_receive(:all).and_return([mock_article])
+        get :index
+        assigns[:articles].should eql [mock_article]
+      end
+
+      it 'should render index template' do
+        Article.stub!(:all).and_return([mock_article])
+        get :index
+        response.should render_template(:index)
+      end
+    end
+  end
+
+  context 'GET show' do
+    describe 'responding go GET show' do
+      it 'should expose article as @article' do
+        Article.should_receive(:find).with('1').and_return(mock_article)
+        get :show, :id => 1
+        assigns[:article].should eql mock_article
+      end
+
+      it 'should render show template' do
+        Article.stub!(:find).and_return(mock_article)
+        get :show, :id => 1
+        response.should render_template(:show)
+      end
+    end
+  end
+end

@@ -39,6 +39,7 @@ describe Article do
   
   describe "process the text" do
     it "should save the text" do
+      pending
       subject.update_attributes(:origin_url => "#{Rails.root}/spec/fixtures/180_page_1.html")
       subject.process
       subject.text.should == "<p>Ao meio-dia desta quinta-feira (12/08), várias pessoas se reuniram com seus guarda-chuvas nas paradas de ônibus pela extensão da Avenida Frei Serafim, Centro de Tereisna, e proporcionaram uma sombra de dignidade àquelas que já se encontravam lá.</p><p>No primeiro minuto, causou estranheza que cada pessoa abrisse seu guarda-chuva colorido e dividisse sua sombra com quem estava ao lado, mas o Flash Mob em Teresina partiu de uma idéia de chamar atenção para a deficiência dos abrigos e paradas de Trânsito de Teresina.</p><p>O Flash Mob não é uma manifestação comum, como uma passeata, piquete, etc. Em geral são organizados pela internet, com pessoas que nunca se viram pessoalmente ou mesmo que tenham se falado online, com a intenção de fazer uma coisa surreal, insólita e divertida. Esse tipo de manifestação já foi usada como forma de protesto, mas é raro. O maior Flash Mob que se tem notícia foi em um show da banda Black Eyed Peas, em que 20 mil pessoas se reuniram e dançaram a coreografia da música I got a feeling ao mesmo tempo. A Prefeitura de Teresina tem um projeto, desde a gestão anterior, de novas paradas de ônibus, mas até hoje nunca saiu do papel. Os abrigos para esperar o transporte coletivo são ruins em Teresina e não protegem nem contra o sol e nem contra a chuva.</p><p>OUTRA MANIFESTAÇÃO<br />Outro grupo de jovens se reuniu próximo ao Hiper Bompreço em manifestação paralela ao Flash Mob Teresina. Eles pintaram o rosto, usaram água e guardas-chuvas para alertar as autoridades e principalmente as pessoas, que a cidade não está preparada para a excessiva quantidade de sol. \"Podemos observar isso, quando olhamos para muitas paradas de ônibus da capital, que não são cobertas para abrigar as pessoas\", disse Patrício Oliveira, membro do grupo. Eles fazem ações diferentes. \"O propósito é brincar com os conceitos de sombra e de luz, mostrando os contrastes e como eles precisam um do outro\", afirmou Patricío Oliveira. Esse movimento utilizou um elemento a mais para protestar: a água. </p><p>CONFIRA AQUI AS IMAGENS:</p>"
@@ -53,6 +54,7 @@ describe Article do
     end
     
     it "after save add published_at" do
+      pending
       subject.update_attributes(:origin_url => "#{Rails.root}/spec/fixtures/180_page_1.html")
       subject.process
       subject.text.should_not be_empty

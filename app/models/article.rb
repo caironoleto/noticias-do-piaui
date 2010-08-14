@@ -15,7 +15,7 @@ class Article < ActiveRecord::Base
   
   def process
     self.text = ""
-    Nokogiri::HTML(open(origin_url)).search(domain.nokogiri_search_field).first.children.each do |element|
+    Nokogiri::HTML(origin_url).search(domain.nokogiri_search_field).first.children.each do |element|
       if element.content.present?
         content = element.content
         content.gsub!("\n", "<br />")

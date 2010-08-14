@@ -1,0 +1,6 @@
+<div id="accordion">
+  <% @articles.each do |article| %>
+    <h3><%= link_to(article.title, article_url(article.slug)) %> <span><%= article.published_at%></span></h3>
+    <div><%= article.text %></div>
+  <% end %>
+</div>

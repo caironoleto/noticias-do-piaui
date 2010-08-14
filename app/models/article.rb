@@ -1,9 +1,14 @@
 class Article < ActiveRecord::Base
   belongs_to :domain
   after_save :add_process_in_delayed_job
+  before_save :create_slug
   
   def add_process_in_delayed_job
     process
+  end
+  
+  def create_slug
+    self.slug = title.parameterize
   end
 
   handle_asynchronously :add_process_in_delayed_job

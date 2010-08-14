@@ -25,6 +25,11 @@ describe Article do
     domain = Domain.create!(valid_attributes)
     subject.update_attributes(:domain => domain)
   end
+  
+  it "should create slug after save" do
+    subject.save
+    subject.slug.should == "value-for-title"
+  end
 
   it "should add in DJ after save" do
     lambda {

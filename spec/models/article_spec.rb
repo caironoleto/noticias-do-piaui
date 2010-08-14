@@ -31,9 +31,9 @@ describe Article do
     subject.slug.should == "value-for-title"
   end
 
-  it "should add in DJ after save" do
+  it "should add in DJ when process" do
     lambda {
-      subject.save 
+      subject.process
     }.should change(Delayed::Backend::ActiveRecord::Job, :count).by(1)
   end
   

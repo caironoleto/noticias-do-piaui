@@ -8,13 +8,13 @@ describe ArticlesController do
   context 'GET index' do
     describe 'responding to GET index' do
       it 'should expose articles as @articles' do
-        Article.should_receive(:all).and_return([mock_article])
+        Article.should_receive(:paginate).with(:per_page => 30, :page => 1).and_return([mock_article])
         get :index
         assigns[:articles].should eql [mock_article]
       end
 
       it 'should render index template' do
-        Article.stub!(:all).and_return([mock_article])
+        Article.stub!(:paginate).and_return([mock_article])
         get :index
         response.should render_template(:index)
       end
@@ -24,14 +24,14 @@ describe ArticlesController do
   context 'GET show' do
     describe 'responding go GET show' do
       it 'should expose article as @article' do
-        Article.should_receive(:find).with('1').and_return(mock_article)
-        get :show, :id => 1
+        Article.should_receive(:find_by_slug).with('value-for-slug').and_return(mock_article)
+        get :show, :slug => "value-for-slug"
         assigns[:article].should eql mock_article
       end
 
       it 'should render show template' do
         Article.stub!(:find).and_return(mock_article)
-        get :show, :id => 1
+        get :show, :slug => "value-for-slug"
         response.should render_template(:show)
       end
     end

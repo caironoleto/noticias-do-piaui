@@ -13,22 +13,34 @@ class Article < ActiveRecord::Base
     if article
       article.children.each do |element|
         if element.content.present?
-          content = element.content
-          content.gsub!("\n", "<br />")
-          content.gsub!("\r", "")
-          content.gsub!("\t", " ")
-          content.lstrip!
+          content = word_processing(element.content)
         end
 
         if element.name == domain.paragraph_tag && content.present? && content.size > 8
           self.text << "<p>#{content}</p>"
         end
       end
-      self.published_at = Time.now
+      domain.nokogiri_time_fields.split(",").each do |field|
+        time_field = Nokogiri::HTML(open(origin_url)).search(field).first
+        if time_field
+          self.published_at = Time.parse(time_field.content)
+        end
+      end
     end
     save
   end
   
   handle_asynchronously :process
+  
+  def word_processing(content)
+    content.gsub!("\n", "<br />")
+    content.gsub!("\r", "")
+    content.gsub!("\t", " ")
+    content.gsub!("", "\"")
+    content.gsub!("", "\"")
+    content.gsub!("", "'")
+    content.lstrip!
+    content
+  end
   
 end

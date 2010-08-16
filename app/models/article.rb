@@ -6,7 +6,7 @@ class Article < ActiveRecord::Base
     self.slug = title.parameterize
   end
   
-  def process
+  def perform
     self.text = ""
     require 'open-uri'
     article = Nokogiri::HTML(open(origin_url)).search(domain.nokogiri_search_field).first
@@ -28,7 +28,4 @@ class Article < ActiveRecord::Base
     end
     save
   end
-  
-  handle_asynchronously :process
-  
 end

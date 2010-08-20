@@ -35,7 +35,7 @@ describe Article do
   it "should add in DJ when process" do
     lambda {
       subject.process
-    }.should change(Delayed::Backend::ActiveRecord::Job, :count).by(1)
+    }.should change(Delayed::Job, :count).by(1)
   end
   
   describe "process the text" do

@@ -1,19 +1,45 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Piauí News</title>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
     <%= stylesheet_link_tag "styles" %>
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <h1>Notícias sobre o Piauí</h1>
+    </header>
+    <section id="articles_list">
+      <%= yield %>
+    </section>
   </body>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.min.js"></script>
+  <%= javascript_include_tag "jquery.timeago" %>
   <script type="text/javascript" charset="utf-8">
+    $.timeago.settings.strings = {
+       prefixAgo: "Publicado há", suffixAgo: "atrás", suffixFromNow: "a partir de agora", seconds: "menos de um minuto", minute: "cerca de um minuto", minutes: "%d minutos",
+       hour: "cerca de uma hora", hours: "cerca de %d horas", day: "um dia", days: "%d dias", month: "cerca de um mês", months: "%d meses",
+       year: "cerca de um ano", years: "%d anos"
+    };
     $(document).ready(function() {
-      $("#accordion").accordion({ autoHeight: true, clearStyle: true, collapsible: true, animated: 'bounceslide', active: false });
+      $("time.timeago").timeago();
+      $("a[rel=internal]").click(function() {
+        console.log($(this).context);
+      });
+      $("article h1 a").toggle(function() {
+        $("article h1 a.expanded").click();
+        $(this).addClass("expanded");
+        $(this).parents("article").children("nav").slideDown(1200);
+        $(this).parents("article").children(".text").slideDown(1200);
+      }, function() {
+        $(this).removeClass("expanded");
+        $(this).parents("article").children("nav").slideUp(500);
+        $(this).parents("article").children(".text").slideUp(500);
+      });
     });
   </script>
   <%= yield(:javascripts) %>

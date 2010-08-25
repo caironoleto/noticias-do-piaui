@@ -49,12 +49,17 @@ table {
 	border-spacing: 0;
 }
 
-body {text-align: center;margin: 20px;}
-header h1 {font-size: 2.3em;margin: 20px;}
-article {margin: 0.5em auto; width: 60%;border: 1px solid #999;-moz-border-radius: 5px;padding: 4px;}
-article h1 {font-size: 1.3em;margin: 0; margin-bottom: 10px;}
+body {text-align: center;margin: 20px;font-family: Arial, "MS Trebuchet", sans-serif;background: none repeat scroll 0 0 #EDF3FE;}
+header h1 {font-size: 2.8em;margin: 30px;}
+article {margin: 0.5em auto; width: 80%;border: 1px solid #999;-moz-border-radius: 5px;padding: 4px;}
+article h1 {font-size: 1.3em;margin: 0; margin-bottom: 10px;text-shadow: 1px 1px #9DA4B2;}
 article .text {text-align: left;text-indent: 50px;}
-p {margin: 10px;}
+p {margin: 10px;line-height: 1.5em;}
 section#articles_list {width: 100%;}
-ul li {display: inline;padding-left: 20px;}
-nav, .text {display: none;}
+ul {padding: 10px;}
+ul a {}
+ul li {display: inline;padding-left: 15px;}
+article nav, .text {display: none;}
+nav {margin-bottom: 5px;}
+a {text-decoration: none; color: #000;}
+a:hover {text-decoration: underline;}

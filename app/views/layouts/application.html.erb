@@ -2,11 +2,12 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Piauí News</title>
+    <title>Notícias sobre o Piauí</title>
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <%= stylesheet_link_tag "styles" %>
+    <%= tweet_widgets_js_tag %>
   </head>
 
   <body>
@@ -27,9 +28,6 @@
     };
     $(document).ready(function() {
       $("time.timeago").timeago();
-      $("a[rel=internal]").click(function() {
-        console.log($(this).context);
-      });
       $("article h1 a").toggle(function() {
         $("article h1 a.expanded").click();
         $(this).addClass("expanded");

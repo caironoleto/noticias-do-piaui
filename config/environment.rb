@@ -36,6 +36,7 @@ Rails::Initializer.run do |config|
   config.gem 'delayed_job'
   config.gem "feedzirra"
   config.gem "will_paginate"
+  config.gem "tweet-button"
   config.time_zone = 'Brasilia'
 
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.

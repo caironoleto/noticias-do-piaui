@@ -59,5 +59,10 @@ describe Article do
       subject.text.should_not be_empty
       subject.published_at.should be_present
     end
+    
+    it "should extract the published time" do
+      time = "27/08/2010 às 14:46h"
+      subject.parse_time(time).should == "08/27/2010 14:46"
+    end
   end
 end

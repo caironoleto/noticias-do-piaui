@@ -23,13 +23,20 @@ class Article < ActiveRecord::Base
       domain.nokogiri_time_fields.split(",").each do |field|
         time_field = Nokogiri::HTML(open(origin_url)).search(field).first
         if time_field
-          self.published_at = Time.parse(time_field.content)
+          self.published_at = Time.parse(parse_time(time_field.content))
         end
       end
     end
     save
   end
-  
+
+  def parse_time(time)
+    regex = "(.*)/(.*)/(.*)( .* )([0-9]*):([0-9]*)|(:([0-9]*))"
+    if time.match(regex)
+      "#{time.match(regex)[2]}/#{time.match(regex)[1]}/#{time.match(regex)[3]} #{time.match(regex)[5]}:#{time.match(regex)[6]}"
+    end
+  end
+
   handle_asynchronously :process
   
   def word_processing(content)

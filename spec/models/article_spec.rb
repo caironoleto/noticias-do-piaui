@@ -62,7 +62,11 @@ describe Article do
     
     it "should extract the published time" do
       time = "27/08/2010 às 14:46h"
-      subject.parse_time(time).should == "08/27/2010 14:46"
+      subject.parse_datetime(time).should == "08/27/2010 14:46"
+      time = "27-08-2010 às 14:46h"
+      subject.parse_datetime(time).should == "08/27/2010 14:46"
+      time = "28/08/10, 07:56"
+      subject.parse_datetime(time).should == "08/28/10 07:56"
     end
   end
 end

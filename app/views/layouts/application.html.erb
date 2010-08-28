@@ -12,7 +12,7 @@
 
   <body id="<%= controller_name %>_<%= controller.action_name %>">
     <header>
-      <h1>Notícias sobre o Piauí</h1>
+      <h1><%= link_to("Notícias sobre o Piauí", root_url)%></h1>
     </header>
     <section id="articles_list">
       <%= yield %>
@@ -28,7 +28,7 @@
     };
     $(document).ready(function() {
       $("time.timeago").timeago();
-      $("article h1 a").toggle(function() {
+      $("#articles_index article h1 a").toggle(function() {
         $("article h1 a.expanded").click();
         show = this;
         $.scrollTo($(this), {onAfter: function() {

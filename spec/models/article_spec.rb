@@ -67,6 +67,8 @@ describe Article do
       subject.parse_datetime(time).should == "08/27/2010 14:46"
       time = "28/08/10, 07:56"
       subject.parse_datetime(time).should == "08/28/10 07:56"
+      time = "28/08/10, 10h:39"
+      subject.parse_datetime(time).should == "08/28/10 10:39"
     end
   end
 end

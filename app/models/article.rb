@@ -57,7 +57,7 @@ class Article < ActiveRecord::Base
   end
   
   def parse_time(time)
-    regex = "([0-9]*):([0-9]*)"
+    regex = "([0-9]*)[h]?:([0-9]*)"
     "#{time.match(regex)[1]}:#{time.match(regex)[2]}"
   end
 end

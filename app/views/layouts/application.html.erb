@@ -41,20 +41,22 @@
     $(document).ready(function() {
       $('time.timeago').livequery(function() { 
         $(this).timeago();
-      });       
-      $("#articles_index article h1 a").toggle(function() {
-        $("article h1 a.expanded").click();
-        show = this;
-        $.scrollTo($(this), {onAfter: function() {
-          $(show).addClass("expanded");
-          $(show).parents("article").children("nav").slideDown();
-          $(show).parents("article").children(".text").slideDown();
-        }});
-      }, function() {
-        $(this).removeClass("expanded");
-        $(this).parents("article").children("nav").slideUp("fast");
-        $(this).parents("article").children(".text").slideUp("fast");
       });
+      $("#articles_index article h1 a").livequery(function() {
+        $(this).toggle(function() {
+          $("article h1 a.expanded").click();
+          show = this;
+          $.scrollTo($(this), {onAfter: function() {
+            $(show).addClass("expanded");
+            $(show).parents("article").children("nav").slideDown();
+            $(show).parents("article").children(".text").slideDown();
+          }});
+        }, function() {
+          $(this).removeClass("expanded");
+          $(this).parents("article").children("nav").slideUp("fast");
+          $(this).parents("article").children(".text").slideUp("fast");
+        });
+      })
       if (WebSocket) {
         host = "<%= request.host %>";
         var ws = new WebSocket("ws://"+host+":3001/");
@@ -62,11 +64,17 @@
         ws.onmessage = function(msg) {
           message = $.parseJSON(msg.data);
           if ($("article#"+message.article.id).length == 0) {
-            html = "<article id=\""+message.article.id+"\"><header><h1><a href=\""+host+message.article.slug+"\">"+message.article.title+"</a>";
+            html = "<article id=\""+message.article.id+"\">";
+            html += "<header>";
+            html += "<h1>";
+            html += "<a href=\""+"/noticias/"+message.article.slug+"\">"+message.article.title+"</a>";
             html += " <time class=\"timeago\" datetime=\""+message.article.published_at+"\" pubdate>"+$.timeago.parse(message.article.published_at)+"</time>";
-            html += " <span>por <a href=\""+message.article.domain.url+"\" rel=\"internal\">"+message.article.domain.title+"</a></span></h1>";
+            html += " <span>por <a href=\""+message.article.domain.url+"\" rel=\"internal\">"+message.article.domain.title+"</a></span>";
+            html += "</h1>";
             html += "</header><nav><ul><li><a href=\""+message.article.origin_url+"\" rel=\"internal\">Veja o artigo original</a></li></ul></nav>";
-            html += "<div class=\"text\">"+message.article.text+"</div></article>"
+            html += "<div class=\"text\">"+message.article.text+"</div>";
+            html += "</article>";
+            console.log(html);
             $('#articles_list').prepend(html);
             $("article#"+message.article.id).timeago();
           }

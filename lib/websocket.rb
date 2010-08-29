@@ -18,7 +18,7 @@ class Processor < SimpleDaemon::Base
 
   def self.start
     loop do  
-      server = WebSocketServer.new(:accepted_domains => [ENV["DOMAIN"]], :port => 3001)
+      server = WebSocketServer.new(:accepted_domains => ["*"], :port => 3001)
       server.run() do |ws|
         ws.handshake()
         loop do

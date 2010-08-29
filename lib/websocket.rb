@@ -17,15 +17,14 @@ class Processor < SimpleDaemon::Base
   SimpleDaemon::WORKING_DIRECTORY = "log" 
 
   def self.start
-    loop do  
-      server = WebSocketServer.new(:accepted_domains => ["*"], :port => 3001)
-      server.run() do |ws|
-        ws.handshake()
-        loop do
-          article = Article.first(:order => "published_at desc", :conditions => "text <> ''").to_json(:include => {:domain => {:only => [:url, :title]}})
-          ws.send(article)
-          sleep(5)
-        end
+    server = WebSocketServer.new(:accepted_domains => ["*"], :port => 3001)
+    server.run() do |ws|
+      ws.handshake()
+      loop do
+        article = Article.first(:order => "published_at desc", :conditions => "text <> ''").to_json(:include => {:domain => {:only => [:url, :title]}})
+        puts article
+        ws.send(article)
+        sleep(5)
       end
     end
   end

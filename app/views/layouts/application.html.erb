@@ -31,7 +31,7 @@
       <%= yield %>
     </section>
   </body>
-  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "jquery.timeago", "jquery.scrollto" %>
+  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "jquery.timeago", "jquery.scrollto", "jquery.livequery" %>
   <script type="text/javascript" charset="utf-8">
     $.timeago.settings.strings = {
        suffixAgo: "atrás", suffixFromNow: "a partir de agora", seconds: "menos de um minuto", minute: "cerca de um minuto", minutes: "%d minutos",
@@ -39,7 +39,9 @@
        year: "cerca de um ano", years: "%d anos"
     };
     $(document).ready(function() {
-      $("time.timeago").timeago();
+      $('time.timeago').livequery(function() { 
+        $(this).timeago();
+      });       
       $("#articles_index article h1 a").toggle(function() {
         $("article h1 a.expanded").click();
         show = this;
@@ -61,11 +63,12 @@
           message = $.parseJSON(msg.data);
           if ($("article#"+message.article.id).length == 0) {
             html = "<article id=\""+message.article.id+"\"><header><h1><a href=\""+host+message.article.slug+"\">"+message.article.title+"</a>";
-            html += "<time class=\"timeago\" datetime=\""+$.timeago.parse(message.article.published_at)+"\" pubdate>"+message.article.published_at+"</time>";
+            html += "<time class=\"timeago\" datetime=\""+message.article.published_at+"\" pubdate>"+$.timeago.parse(message.article.published_at)+"</time>";
             html += " <span>por <a href=\""+message.article.domain.url+"\" rel=\"internal\">"+message.article.domain.title+"</a></span></h1>";
             html += "</header><nav><ul><li><a href=\""+message.article.origin_url+"\" rel=\"internal\">Veja o artigo original</a></li></ul></nav>";
             html += "<div class=\"text\">"+message.article.text+"</div></article>"
             $('#articles_list').prepend(html);
+            $("article#"+message.article.id).timeago();
           }
         }
       }

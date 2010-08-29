@@ -6,6 +6,7 @@ set :deploy_via, :remote_cache
 set :user, "news"
 set :deploy_to, "/home/news/www/#{application}"
 set :use_sudo, false
+set :git_enable_submodules, true
 
 role :web, "news.caironoleto.com"
 role :app, "news.caironoleto.com"

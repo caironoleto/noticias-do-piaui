@@ -56,9 +56,10 @@
       if (WebSocket) {
         host = "<%= request.host %>";
         var ws = new WebSocket("ws://"+host+":3001/");
+        ws.onopen = function() {console.log("connected");}
         ws.onmessage = function(msg) {
           message = $.parseJSON(msg.data);
-          if (!$("article#"+message.article.id)) {
+          if ($("article#"+message.article.id).length == 0) {
             html = "<article id=\""+message.article.id+"\"><header><h1><a href=\""+host+message.article.slug+"\">"+message.article.title+"</a>";
             html += "<time class=\"timeago\" datetime=\""+$.timeago.parse(message.article.published_at)+"\" pubdate>"+message.article.published_at+"</time>";
             html += " <span>por <a href=\""+message.article.domain.url+"\" rel=\"internal\">"+message.article.domain.title+"</a></span></h1>";

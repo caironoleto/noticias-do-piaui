@@ -63,7 +63,7 @@
           message = $.parseJSON(msg.data);
           if ($("article#"+message.article.id).length == 0) {
             html = "<article id=\""+message.article.id+"\"><header><h1><a href=\""+host+message.article.slug+"\">"+message.article.title+"</a>";
-            html += "<time class=\"timeago\" datetime=\""+message.article.published_at+"\" pubdate>"+$.timeago.parse(message.article.published_at)+"</time>";
+            html += " <time class=\"timeago\" datetime=\""+message.article.published_at+"\" pubdate>"+$.timeago.parse(message.article.published_at)+"</time>";
             html += " <span>por <a href=\""+message.article.domain.url+"\" rel=\"internal\">"+message.article.domain.title+"</a></span></h1>";
             html += "</header><nav><ul><li><a href=\""+message.article.origin_url+"\" rel=\"internal\">Veja o artigo original</a></li></ul></nav>";
             html += "<div class=\"text\">"+message.article.text+"</div></article>"

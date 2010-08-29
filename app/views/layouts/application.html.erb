@@ -54,8 +54,8 @@
         $(this).parents("article").children(".text").slideUp("fast");
       });
       if (WebSocket) {
-        host = "<%= request.host_with_port %>";
-        var ws = new WebSocket("ws://localhost:3001/");
+        host = "<%= request.host %>";
+        var ws = new WebSocket("ws://"+host+":3001/");
         ws.onmessage = function(msg) {
           message = $.parseJSON(msg.data);
           if (!$("article#"+message.article.id)) {

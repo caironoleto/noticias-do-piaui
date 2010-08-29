@@ -31,8 +31,7 @@
       <%= yield %>
     </section>
   </body>
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-  <%= javascript_include_tag "jquery.timeago", "jquery.scrollto" %>
+  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "jquery.timeago", "jquery.scrollto" %>
   <script type="text/javascript" charset="utf-8">
     $.timeago.settings.strings = {
        suffixAgo: "atrás", suffixFromNow: "a partir de agora", seconds: "menos de um minuto", minute: "cerca de um minuto", minutes: "%d minutos",
@@ -54,6 +53,21 @@
         $(this).parents("article").children("nav").slideUp("fast");
         $(this).parents("article").children(".text").slideUp("fast");
       });
+      if (WebSocket) {
+        host = "<%= request.host_with_port %>";
+        var ws = new WebSocket("ws://localhost:3001/");
+        ws.onmessage = function(msg) {
+          message = $.parseJSON(msg.data);
+          if (!$("article#"+message.article.id)) {
+            html = "<article id=\""+message.article.id+"\"><header><h1><a href=\""+host+message.article.slug+"\">"+message.article.title+"</a>";
+            html += "<time class=\"timeago\" datetime=\""+$.timeago.parse(message.article.published_at)+"\" pubdate>"+message.article.published_at+"</time>";
+            html += " <span>por <a href=\""+message.article.domain.url+"\" rel=\"internal\">"+message.article.domain.title+"</a></span></h1>";
+            html += "</header><nav><ul><li><a href=\""+message.article.origin_url+"\" rel=\"internal\">Veja o artigo original</a></li></ul></nav>";
+            html += "<div class=\"text\">"+message.article.text+"</div></article>"
+            $('#articles_list').prepend(html);
+          }
+        }
+      }
     });
   </script>
   <%= yield(:javascripts) %>

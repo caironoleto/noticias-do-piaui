@@ -1,7 +1,7 @@
 <% @articles.each do |article| %>
   <article id="<%= article.id %>">
     <header>
-      <h1><%= link_to(article.title, article_url(article.slug)) %> <time class="timeago" datetime="<%= article.published_at.iso8601%>" pubdate><%= article.published_at%></time> <span>por <%= link_to(article.domain.title, article.domain.url, :rel => :internal) %></span></h1>
+      <h1><%= link_to(article.title, article_url(article.slug), :title => article.title) %> <time class="timeago" datetime="<%= article.published_at.iso8601%>" pubdate><%= article.published_at%></time> <span>por <%= link_to(article.domain.title, article.domain.url, :rel => :internal) %></span></h1>
     </header>
     <nav>
       <ul>

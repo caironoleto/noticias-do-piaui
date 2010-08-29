@@ -38,6 +38,15 @@
        hour: "cerca de uma hora", hours: "cerca de %d horas", day: "um dia", days: "%d dias", month: "cerca de um mês", months: "%d meses",
        year: "cerca de um ano", years: "%d anos"
     };
+    function create_article(message) {
+      html = "<article id=\""+message.article.id+"\"><header><h1>";
+      html += "<a href=\""+"/noticias/"+message.article.slug+"\" title=\""+message.article.title+"\">"+message.article.title+"</a>";
+      html += " <time class=\"timeago\" datetime=\""+message.article.published_at+"\" pubdate>"+$.timeago.parse(message.article.published_at)+"</time>";
+      html += " <span>por <a href=\""+message.article.domain.url+"\" rel=\"internal\">"+message.article.domain.title+"</a></span></h1>";
+      html += "</header><nav><ul><li><a href=\""+message.article.origin_url+"\" rel=\"internal\">Veja o artigo original</a></li></ul></nav>";
+      html += "<div class=\"text\">"+message.article.text+"</div></article>";
+      return html;
+    } 
     $(document).ready(function() {
       $('time.timeago').livequery(function() { 
         $(this).timeago();
@@ -64,18 +73,7 @@
         ws.onmessage = function(msg) {
           message = $.parseJSON(msg.data);
           if ($("article#"+message.article.id).length == 0) {
-            html = "<article id=\""+message.article.id+"\">";
-            html += "<header>";
-            html += "<h1>";
-            html += "<a href=\""+"/noticias/"+message.article.slug+"\">"+message.article.title+"</a>";
-            html += " <time class=\"timeago\" datetime=\""+message.article.published_at+"\" pubdate>"+$.timeago.parse(message.article.published_at)+"</time>";
-            html += " <span>por <a href=\""+message.article.domain.url+"\" rel=\"internal\">"+message.article.domain.title+"</a></span>";
-            html += "</h1>";
-            html += "</header><nav><ul><li><a href=\""+message.article.origin_url+"\" rel=\"internal\">Veja o artigo original</a></li></ul></nav>";
-            html += "<div class=\"text\">"+message.article.text+"</div>";
-            html += "</article>";
-            console.log(html);
-            $('#articles_list').prepend(html);
+            $('#articles_list').prepend(create_article(message));
             $("article#"+message.article.id).timeago();
           }
         }

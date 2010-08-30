@@ -66,18 +66,6 @@
           $(this).parents("article").children(".text").slideUp("fast");
         });
       })
-      if (WebSocket) {
-        host = "<%= request.host %>";
-        var ws = new WebSocket("ws://"+host+":3001/");
-        ws.onopen = function() {console.log("connected");}
-        ws.onmessage = function(msg) {
-          message = $.parseJSON(msg.data);
-          if ($("#articles_index article#"+message.article.id).length == 0) {
-            $('#articles_list').prepend(create_article(message));
-            $("article#"+message.article.id).timeago();
-          }
-        }
-      }
     });
   </script>
   <%= yield(:javascripts) %>

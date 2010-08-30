@@ -1,13 +1,10 @@
 <% @articles.each do |article| %>
   <article id="<%= article.id %>">
     <header>
-      <h1><%= link_to(article.title, article_url(article.slug), :title => article.title) %> <time class="timeago" datetime="<%= article.published_at.iso8601%>" pubdate><%= article.published_at%></time> <span>por <%= link_to(article.domain.title, article.domain.url, :rel => :internal) %></span></h1>
+      <h1><%= link_to(article.title, article_url(article.slug), :title => article.title) %></h1>
+      <p class="complement"><time class="timeago" datetime="<%= article.published_at.iso8601%>" pubdate><%= article.published_at%></time> <span class="source"><%= link_to(article.domain.title, article.domain.url, :rel => :external) %></span></p>
     </header>
-    <nav>
-      <ul>
-        <li><%= link_to("Veja o artigo original", article.origin_url, :rel => :internal) %></li>
-      </ul>
-    </nav>
+    <p class="original"><%= link_to("Veja o artigo original", article.origin_url, :rel => :external) %></p>
     <div class="text"><%= article.text %></div>
   </article>
 <% end %>

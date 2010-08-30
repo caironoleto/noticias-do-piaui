@@ -72,7 +72,7 @@
         ws.onopen = function() {console.log("connected");}
         ws.onmessage = function(msg) {
           message = $.parseJSON(msg.data);
-          if ($("article#"+message.article.id).length == 0) {
+          if ($("#articles_index article#"+message.article.id).length == 0) {
             $('#articles_list').prepend(create_article(message));
             $("article#"+message.article.id).timeago();
           }

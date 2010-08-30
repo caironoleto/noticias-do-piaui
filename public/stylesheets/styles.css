@@ -7,60 +7,146 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	outline: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-	background: transparent;
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
 }
 body {
-	line-height: 1;
+	line-height:1;
 }
 ol, ul {
-	list-style: none;
+	list-style:none;
 }
 blockquote, q {
-	quotes: none;
+	quotes:none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+	content:'';
+	content:none;
+}
+a {
+  text-decoration:none;
+  color:#407C1F;
+}
+a:hover {
+  text-decoration:underline;
 }
 
 /* remember to define focus styles! */
 :focus {
-	outline: 0;
+	outline:0;
 }
 
 /* remember to highlight inserts somehow! */
 ins {
-	text-decoration: none;
+	text-decoration:none;
 }
 del {
-	text-decoration: line-through;
+	text-decoration:line-through;
 }
 
 /* tables still need 'cellspacing="0"' in the markup */
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+	border-collapse:collapse;
+	border-spacing:0;
 }
 
-body {text-align: center;margin: 20px;font-family: Arial, "MS Trebuchet", sans-serif;background-color: #DFDFDF;}
-header h1 {font-size: 2.8em;margin: 30px;}
-header h1 time, header h1 span {font-size: 0.5em;text-shadow: none;}
-article {margin-bottom: 1.3em; padding: 4px;text-align: left;}
-article h1 {font-size: 1.3em;margin: 0; margin-bottom: 10px;text-shadow: 1px 1px #A7A7A7;}
-article .text {text-align: left;text-indent: 50px;}
-p {margin: 10px;line-height: 1.5em;}
-section#articles_list {width: 100%;}
-ul {padding: 10px;}
+body {
+  text-align:center;
+  padding:20px;
+  font-family:Arial, Verdana, sans-serif;
+  background-color:#fbfbdf;
+}
+#top {
+  height:70px; 
+  background-color:#fff; 
+  display:block; 
+  margin:18px 0 18px 30px; 
+  -webkit-border-radius:0 5px 5px 0;
+     -moz-border-radius:0 5px 5px 0;
+          border-radius:0 5px 5px 0;
+  -webkit-box-shadow:1px 1px 2px #CBCBB4;
+     -moz-box-shadow:1px 1px 2px #CBCBB4;
+          box-shadow:1px 1px 2px #CBCBB4;
+}
+#top h1 {
+  font-size:2.3em;
+  background:url("/images/logo-news.png") no-repeat;
+  height:96px;
+  margin:-15px 0 0 -30px;
+  padding-left:130px;
+  position:absolute;
+}
+#top h1 a {
+  float:left;
+  padding:30px 0;
+}
+.timeago {
+  font-size:0.7em;
+  background-color:#ebefef;
+  padding:3px 7px;
+  -webkit-border-radius:10px;
+     -moz-border-radius:10px;
+          border-radius:10px;
+}
+.source a {
+  margin-left:6px;
+  font-size:0.7em;
+  background-color:#8b8f8f;
+  color:#fff;
+  white-space:nowrap;
+  padding:3px 7px;
+  -webkit-border-radius:10px;
+     -moz-border-radius:10px;
+          border-radius:10px;
+}
+.source a.mn {
+  background-color:#0072BC;
+}
+.source a.cv {
+  background-color:#20863D;
+}
+.source a.g180 {
+  background-color:#D06A2C;
+}
+.source a:hover {
+  text-decoration:none;
+}
+article {
+  margin-bottom:1.3em; 
+  padding:4px;
+  text-align:left;
+  display:block;
+}
+article h1 {
+  font-size:1.25em;
+  margin-bottom:10px;
+  font-weight:normal;
+  display:inline;
+}
+article .complement {
+  display:inline;
+}
+article .text {text-align:left;text-indent:50px;}
+p {margin:10px;line-height:1.5em;}
+section#articles_list {
+  background-color:#FFFFFF;
+  display:block;
+  padding:20px;
+  -webkit-border-radius:8px;
+     -moz-border-radius:8px;
+          border-radius:8px;
+  -webkit-box-shadow:1px 1px 2px #CBCBB4;
+     -moz-box-shadow:1px 1px 2px #CBCBB4;
+          box-shadow:1px 1px 2px #CBCBB4;
+}
+ul {padding:10px;}
 ul a {}
-ul li {display: inline;padding-left: 15px;}
-#articles_index article nav,#articles_index .text {display: none;}
-nav {margin-bottom: 5px;}
-a {text-decoration: none; color: #000;}
-a:hover {text-decoration: underline;}
+ul li {display:inline;padding-left:15px;}
+#articles_index article .original, #articles_index .text {display:none;}
+nav {margin-bottom:5px;}

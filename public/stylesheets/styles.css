@@ -76,6 +76,7 @@ body {
 }
 #top h1 {
   font-size:2.3em;
+  letter-spacing:-0.05em;
   background:url("/images/logo-news.png") no-repeat;
   height:96px;
   margin:-15px 0 0 -30px;
@@ -105,13 +106,13 @@ body {
      -moz-border-radius:10px;
           border-radius:10px;
 }
-.source a.mn {
+.source a[href="http://meionorte.com"] {
   background-color:#0072BC;
 }
-.source a.cv {
+.source a[href="http://cidadeverde.com"] {
   background-color:#20863D;
 }
-.source a.g180 {
+.source a[href="http://180graus.com"] {
   background-color:#D06A2C;
 }
 .source a:hover {
@@ -133,7 +134,7 @@ article .complement {
   display:inline;
 }
 article .text {text-align:left;text-indent:50px;}
-p {margin:10px;line-height:1.5em;}
+p {margin:10px; line-height:1.5em;}
 section#articles_list {
   background-color:#FFFFFF;
   display:block;
@@ -149,4 +150,32 @@ ul {padding:10px;}
 ul a {}
 ul li {display:inline;padding-left:15px;}
 #articles_index article .original, #articles_index .text {display:none;}
+#articles_index .text { 
+  -webkit-border-radius:5px;
+     -moz-border-radius:5px;
+          border-radius:5px;
+  background: #f6f6f6;
+  padding: 5px;
+  margin: 5px 0;
+}
+
 nav {margin-bottom:5px;}
+
+.pagination a{
+  padding: 3px 5px;
+  border: 1px solid #ddd;
+  -webkit-border-radius:3px;
+     -moz-border-radius:3px;
+          border-radius:3px;
+}
+
+.pagination .current {
+  padding: 3px 5px;
+  border: 1px solid #666;
+  font-weight: bold;
+  background: #666;
+  color: #fff;
+  -webkit-border-radius:3px;
+     -moz-border-radius:3px;
+          border-radius:3px;
+}

@@ -23,14 +23,14 @@ describe DomainsController do
     
     it "should expose article as @articles" do
       Domain.should_receive(:find_by_slug).with("cidade-verde").and_return(mock_domain(:articles => [mock_article]))
-      mock_domain.articles.should_receive(:paginate).with(:per_page => 30, :page => 1).and_return([mock_article])
+      mock_domain.articles.should_receive(:paginate).with(:per_page => 30, :page => 1, :order => "published_at desc", :conditions => "text <> ''").and_return([mock_article])
       get :show, :slug => "cidade-verde"
       assigns[:articles].should eql [mock_article]
     end
     
     it "should expose article as @articles with different page" do
       Domain.should_receive(:find_by_slug).with("cidade-verde").and_return(mock_domain(:articles => [mock_article]))
-      mock_domain.articles.should_receive(:paginate).with(:per_page => 30, :page => 2).and_return([mock_article])
+      mock_domain.articles.should_receive(:paginate).with(:per_page => 30, :page => 2, :order => "published_at desc", :conditions => "text <> ''").and_return([mock_article])
       get :show, :slug => "cidade-verde", :page => "2"
       assigns[:articles].should eql [mock_article]
     end

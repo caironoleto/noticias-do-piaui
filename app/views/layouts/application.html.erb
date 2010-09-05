@@ -40,24 +40,31 @@
        hour: "cerca de uma hora", hours: "cerca de %d horas", day: "um dia", days: "%d dias", month: "cerca de um mês", months: "%d meses",
        year: "cerca de um ano", years: "%d anos"
     };
+    function toggle(subject) {
+      $(subject).toggle(function() {
+        $("article h1 a.expanded").click();
+        show = this;
+        $.scrollTo($(this), {onAfter: function() {
+          $(show).addClass("expanded");
+          $(show).parents("article").children("nav").slideDown();
+          $(show).parents("article").children(".text").slideDown();
+        }});
+      }, function() {
+        $(this).removeClass("expanded");
+        $(this).parents("article").children("nav").slideUp("fast");
+        $(this).parents("article").children(".text").slideUp("fast");
+      });
+    }
     $(document).ready(function() {
       $('time.timeago').livequery(function() { 
         $(this).timeago();
       });
       $("#articles_index article h1 a").livequery(function() {
-        $(this).toggle(function() {
-          $("article h1 a.expanded").click();
-          show = this;
-          $.scrollTo($(this), {onAfter: function() {
-            $(show).addClass("expanded");
-            $(show).parents("article").children("nav").slideDown();
-            $(show).parents("article").children(".text").slideDown();
-          }});
-        }, function() {
-          $(this).removeClass("expanded");
-          $(this).parents("article").children("nav").slideUp("fast");
-          $(this).parents("article").children(".text").slideUp("fast");
-        });
+        toggle(this);
+      })
+
+      $("#domains_show article h1 a").livequery(function() {
+        toggle(this);
       })
     });
   </script>

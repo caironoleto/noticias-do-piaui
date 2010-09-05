@@ -12,6 +12,11 @@ describe Domain do
   subject do
     Domain.create!(@valid_attributes)
   end
+  
+  it "should create slug after save" do
+    subject.save
+    subject.slug.should eql "value-for-title"
+  end
 
   it "should create new article from feed" do
     lambda {

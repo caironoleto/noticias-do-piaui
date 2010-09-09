@@ -1,0 +1,8 @@
+<article id="<%= article.id %>">
+  <header>
+    <h1><%= link_to(article.title, article_url(article.slug), :title => article.title) %></h1>
+    <p class="complement"><time class="timeago" datetime="<%= article.published_at.iso8601%>" pubdate><%= article.published_at%></time> <span class="source"><%= link_to(article.domain.title, domain_url(article.domain.slug), :class => article.domain.slug) %></span></p>
+  </header>
+  <p class="original"><%= link_to("Veja o artigo original", article.origin_url, :rel => :external) %></p>
+  <div class="text"><%= article.text %></div>
+</article>

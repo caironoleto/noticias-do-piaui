@@ -1,11 +1,1 @@
-<article>
-  <header>
-    <h1><%= link_to(@article.title, article_url(@article.slug)) %> <time class="timeago" datetime="<%= @article.published_at.iso8601%>" pubdate><%= @article.published_at%></time> <span>por <%= link_to(@article.domain.title, @article.domain.url, :rel => :internal) %></span></h1>
-  </header>
-  <nav>
-    <ul>
-      <li><%= link_to("Veja o artigo original", @article.origin_url, :rel => :internal) %></li>
-    </ul>
-  </nav>
-  <div class="text"><%= @article.text %></div>
-</article>
+<%= render :partial => "article", :locals => {:article => @article} %>

@@ -47,11 +47,13 @@
         $.scrollTo($(this), {onAfter: function() {
           $(show).addClass("expanded");
           $(show).parents("article").children("nav").slideDown();
+          $(show).parents("article").children(".original").slideDown();
           $(show).parents("article").children(".text").slideDown();
         }});
       }, function() {
         $(this).removeClass("expanded");
         $(this).parents("article").children("nav").slideUp("fast");
+        $(this).parents("article").children(".original").slideUp("fast");
         $(this).parents("article").children(".text").slideUp("fast");
       });
     }

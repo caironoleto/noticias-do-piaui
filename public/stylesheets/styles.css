@@ -106,14 +106,16 @@ body {
      -moz-border-radius:10px;
           border-radius:10px;
 }
-.source a[href="http://meionorte.com"] {
+
+.source a.meio-norte {
   background-color:#0072BC;
 }
-.source a[href="http://cidadeverde.com"] {
+.source a.cidade-verde {
   background-color:#20863D;
 }
-.source a[href="http://180graus.com"] {
-  background-color:#D06A2C;
+.source a.180-graus {
+/*  background-color:#D06A2C;*/
+  background-color:#FFF;
 }
 .source a:hover {
   text-decoration:none;

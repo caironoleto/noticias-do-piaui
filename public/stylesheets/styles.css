@@ -91,6 +91,7 @@ body {
   font-size:0.7em;
   background-color:#ebefef;
   padding:3px 7px;
+  white-space: nowrap;
   -webkit-border-radius:10px;
      -moz-border-radius:10px;
           border-radius:10px;
@@ -102,6 +103,7 @@ body {
   color:#fff;
   white-space:nowrap;
   padding:3px 7px;
+  white-space: nowrap;
   -webkit-border-radius:10px;
      -moz-border-radius:10px;
           border-radius:10px;

@@ -183,3 +183,106 @@ nav {margin-bottom:5px;}
      -moz-border-radius:3px;
           border-radius:3px;
 }
+
+#cse {
+  float: right;
+  padding: 9px;
+  width: 480px;
+}
+
+.gsc-control-cse {
+  font-family: Arial, sans-serif;
+  border-color: #FBFBDF;
+  background-color: #FBFBDF;
+}
+input.gsc-input {
+  border-color: #407C1F;
+}
+input.gsc-search-button {
+  border-color: #407C1F;
+  background-color: #AADA92;
+}
+.gsc-tabHeader.gsc-tabhInactive {
+  border-color: #407C1F;
+  background-color: #FFFFFF;
+}
+.gsc-tabHeader.gsc-tabhActive {
+  border-color: #407C1F;
+  background-color: #ffffff;
+}
+.gsc-tabsArea {
+  border-color: #407C1F;
+}
+.gsc-webResult.gsc-result {
+  border-color: #A9DA92;
+  background-color: #FFFFFF;
+}
+.gsc-webResult.gsc-result:hover {
+  border-color: #A9DA92;
+  background-color: #FFFFFF;
+}
+.gs-webResult.gs-result a.gs-title:link,
+.gs-webResult.gs-result a.gs-title:link b {
+  color: #0066CC;
+}
+.gs-webResult.gs-result a.gs-title:visited,
+.gs-webResult.gs-result a.gs-title:visited b {
+  color: #0066CC;
+}
+.gs-webResult.gs-result a.gs-title:hover,
+.gs-webResult.gs-result a.gs-title:hover b {
+  color: #0066CC;
+}
+.gs-webResult.gs-result a.gs-title:active,
+.gs-webResult.gs-result a.gs-title:active b {
+  color: #0066CC;
+}
+.gsc-cursor-page {
+  color: #0066CC;
+}
+a.gsc-trailing-more-results:link {
+  color: #0066CC;
+}
+.gs-webResult.gs-result .gs-snippet {
+  color: #454545;
+}
+.gs-webResult.gs-result .gs-visibleUrl {
+  color: #815FA7;
+}
+.gs-webResult.gs-result .gs-visibleUrl-short {
+  color: #815FA7;
+}
+.gsc-cursor-box {
+  border-color: #A9DA92;
+}
+.gsc-results .gsc-cursor-page {
+  border-color: #407C1F;
+  background-color: #FFFFFF;
+}
+.gsc-results .gsc-cursor-page.gsc-cursor-current-page {
+  border-color: #407C1F;
+  background-color: #ffffff;
+}
+.gs-promotion.gs-result {
+  border-color: #94CC7A;
+  background-color: #CBE8B4;
+}
+.gs-promotion.gs-result a.gs-title:link {
+  color: #0066CC;
+}
+.gs-promotion.gs-result a.gs-title:visited {
+  color: #0066CC;
+}
+.gs-promotion.gs-result a.gs-title:hover {
+  color: #0066CC;
+}
+.gs-promotion.gs-result a.gs-title:active {
+  color: #0066CC;
+}
+.gs-promotion.gs-result .gs-snippet {
+  color: #454545;
+}
+.gs-promotion.gs-result .gs-visibleUrl,
+.gs-promotion.gs-result .gs-visibleUrl-short {
+  color: #815FA7;
+}

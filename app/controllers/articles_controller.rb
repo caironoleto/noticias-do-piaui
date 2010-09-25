@@ -7,5 +7,11 @@ class ArticlesController < ApplicationController
   # GET /articles/:id.:format
   def show
     @article = Article.find_by_slug(params[:slug])
+    @title = @article.title
+  end
+  
+  # GET /sitemap.xml
+  def sitemap
+    @articles = Article.all(:order => "published_at desc", :conditions => "text <> ''", :limit => 50000)
   end
 end

@@ -22,15 +22,22 @@ describe ArticlesController do
   end
 
   context 'GET show' do
-    describe 'responding go GET show' do
+    describe 'responding to GET show' do
       it 'should expose article as @article' do
-        Article.should_receive(:find_by_slug).with('value-for-slug').and_return(mock_article)
+        Article.should_receive(:find_by_slug).with('value-for-slug').and_return(mock_article(:title => "Whatever"))
         get :show, :slug => "value-for-slug"
         assigns[:article].should eql mock_article
       end
 
+      it 'should expose article title as @title' do
+        Article.should_receive(:find_by_slug).with('value-for-slug').and_return(mock_article)
+        mock_article.should_receive(:title).and_return("This is my title")
+        get :show, :slug => "value-for-slug"
+        assigns[:title].should eql "This is my title"
+      end
+
       it 'should render show template' do
-        Article.stub!(:find).and_return(mock_article)
+        Article.stub!(:find).and_return(mock_article(:title => "Whatever"))
         get :show, :slug => "value-for-slug"
         response.should render_template(:show)
       end

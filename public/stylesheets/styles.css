@@ -153,7 +153,7 @@ section#articles_list {
 ul {padding:10px;}
 ul a {}
 ul li {display:inline;padding-left:15px;}
-#articles_index article .original, #articles_index .text, #domains_show article .original, #domains_show .text {display:none;}
+#articles_index article .original, #articles_index article .tweet_button, #articles_index .text, #domains_show article .original, #domains_show article .tweet_button, #domains_show .text {display:none;}
 #articles_index .text { 
   -webkit-border-radius:5px;
      -moz-border-radius:5px;

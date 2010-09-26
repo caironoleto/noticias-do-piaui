@@ -66,7 +66,9 @@ body {
   height:70px; 
   background-color:#fff; 
   display:block; 
-  margin:18px 0 18px 30px; 
+  margin:18px auto;
+  width:1000px;
+  text-align:left; 
   -webkit-border-radius:0 5px 5px 0;
      -moz-border-radius:0 5px 5px 0;
           border-radius:0 5px 5px 0;
@@ -108,7 +110,26 @@ body {
      -moz-border-radius:10px;
           border-radius:10px;
 }
-
+.source-meio-norte h1 {
+  padding-left:25px;
+  background:url('/images/mn.gif') 0 1px no-repeat;
+}
+.source-180-graus h1 {
+  padding-left:25px;
+  background:url('/images/180.png') 0 2px no-repeat;
+}
+.source-cidade-verde h1 {
+  padding-left:25px;
+  background:url('/images/cv.png') 0 1px no-repeat;
+}
+.published {
+  color:#999;
+  font-size:0.85em;
+  margin:6px 25px !important;
+}
+.tweet_button {
+  float:right;
+}
 .source a.meio-norte {
   background-color:#0072BC;
 }
@@ -124,12 +145,14 @@ body {
 }
 article {
   margin-bottom:1.3em; 
-  padding:4px;
+  padding:4px 4px 0.5em;
+  margin-bottom:0.5em;
+  border-bottom:1px solid #dedede;
   text-align:left;
   display:block;
 }
 article h1 {
-  font-size:1.25em;
+  font-size:1.1em;
   margin-bottom:10px;
   font-weight:normal;
   display:inline;
@@ -137,12 +160,18 @@ article h1 {
 article .complement {
   display:inline;
 }
-article .text {text-align:left;text-indent:50px;}
-p {margin:10px; line-height:1.5em;}
+p {
+  margin:10px;
+  line-height:1.5em;
+}
+
 section#articles_list {
   background-color:#FFFFFF;
   display:block;
   padding:20px;
+  margin:0 auto;
+  width:960px;
+  text-align:left; 
   -webkit-border-radius:8px;
      -moz-border-radius:8px;
           border-radius:8px;
@@ -153,14 +182,11 @@ section#articles_list {
 ul {padding:10px;}
 ul a {}
 ul li {display:inline;padding-left:15px;}
-#articles_index article .original, #articles_index article .tweet_button, #articles_index .text, #domains_show article .original, #domains_show article .tweet_button, #domains_show .text {display:none;}
+#articles_index article .extra, #articles_index .text, #domains_show .text {display:none;}
 #articles_index .text { 
-  -webkit-border-radius:5px;
-     -moz-border-radius:5px;
-          border-radius:5px;
-  background: #f6f6f6;
-  padding: 5px;
-  margin: 5px 0;
+  padding:5px 15px;
+  margin:5px 0;
+  font-size:0.95em;
 }
 
 nav {margin-bottom:5px;}

@@ -48,15 +48,13 @@
         $.scrollTo($(this), {onAfter: function() {
           $(show).addClass("expanded");
           $(show).parents("article").children("nav").slideDown();
-          $(show).parents("header").children(".original").slideDown();
-          $(show).parents("header").children(".tweet_button").slideDown();
+          $(show).parents("header").children(".extra").slideDown();
           $(show).parents("article").children(".text").slideDown();
         }});
       }, function() {
         $(this).removeClass("expanded");
         $(this).parents("article").children("nav").slideUp("fast");
-        $(this).parents("header").children(".original").slideUp("fast");
-        $(this).parents("header").children(".tweet_button").slideUp("fast");
+        $(this).parents("header").children(".extra").slideUp("fast");
         $(this).parents("article").children(".text").slideUp("fast");
       });
     }

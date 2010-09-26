@@ -1,12 +1,13 @@
-<article id="<%= article.id %>">
+<article id="<%= article.id %>" class="source-<%= article.domain.slug %>">
   <header>
     <h1><%= link_to(article.title, article_url(article.slug), :title => article.title) %></h1>
     <p class="complement">
       <time class="timeago" datetime="<%= article.published_at.iso8601%>" pubdate><%= article.published_at%></time>
-      <span class="source"><%= link_to(article.domain.title, domain_url(article.domain.slug), :class => article.domain.slug) %></span>
     </p>
-    <div class="tweet_button"><%= tweet_button(:url => article_url(article.slug), :text => article.title) %></div>
-    <p class="original"><%= link_to("Veja o artigo original", article.origin_url, :rel => :external) %></p>
+    <div class="extra">
+      <div class="tweet_button"><%= tweet_button(:url => article_url(article.slug), :text => article.title) %></div>
+      <p class="published">Texto publicado <%= link_to("originalmente", article.origin_url, :rel => :external, :class => "original") %> no site <%= link_to(article.domain.title, domain_url(article.domain.slug)) %></p>
+    </div>
   </header>
   <div class="text"><%= article.text %></div>
 </article>

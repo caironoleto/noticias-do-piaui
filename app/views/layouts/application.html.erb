@@ -35,6 +35,7 @@
     </section>
   </body>
   <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "jquery.timeago", "jquery.scrollto", "jquery.livequery" %>
+  <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
   <script type="text/javascript" charset="utf-8">
     $.timeago.settings.strings = {
        suffixAgo: "atrás", suffixFromNow: "a partir de agora", seconds: "menos de um minuto", minute: "cerca de um minuto", minutes: "%d minutos",
@@ -44,13 +45,10 @@
     function toggle(subject) {
       $(subject).toggle(function() {
         $("article h1 a.expanded").click();
-        show = this;
-        $.scrollTo($(this), {onAfter: function() {
-          $(show).addClass("expanded");
-          $(show).parents("article").children("nav").slideDown();
-          $(show).parents("header").children(".extra").slideDown();
-          $(show).parents("article").children(".text").slideDown();
-        }});
+        $(this).addClass("expanded");
+        $(this).parents("article").children("nav").slideDown();
+        $(this).parents("header").children(".extra").slideDown();
+        $(this).parents("article").children(".text").slideDown();
       }, function() {
         $(this).removeClass("expanded");
         $(this).parents("article").children("nav").slideUp("fast");

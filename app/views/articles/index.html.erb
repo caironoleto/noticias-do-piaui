@@ -8,24 +8,26 @@
 <% content_for(:javascripts) do %>
 <script type="text/javascript" charset="utf-8">
 $(document).ready(function() {
+  var host = "<%= request.host %>";
   function create_article(message) {
-    html = "<article id=\""+message.article.id+"\"><header><h1>";
-    html += "<a href=\""+"/noticias/"+message.article.slug+"\" title=\""+message.article.title+"\">"+message.article.title+"</a></h1>";
-    html += "<p class=\"complement\"><time class=\"timeago\" datetime=\""+message.article.published_at+"\" pubdate>"+$.timeago.parse(message.article.published_at)+"</time>";
-    html += " <span  class=\"source\"><a href=\""+message.article.domain.slug+"\" class=\""+message.article.domain.slug+"\">"+message.article.domain.title+"</a></span></p>";
-    html += "</header><p class=\"original\"><a href=\""+message.article.origin_url+"\" rel=\"external\">Veja o artigo original</a></p>";
-    html += "<div class=\"text\">"+message.article.text+"</div></article>";
+    html = "<article id=\""+message.article.id+"\" class=\"source-"+message.article.domain.slug+"\"><header>";
+    html += "<h1><a href=\""+host+"/noticias/"+message.article.slug+"\" title=\""+message.article.title+"\">"+message.article.title+"</a></h1>";
+    html += "<p class=\"complement\"><time class=\"timeago\" datetime=\""+message.article.published_at+"\" pubdate>"+$.timeago.parse(message.article.published_at)+"</time></p>";
+    html += "<div class=\"extra\">";
+    html += "<div class=\"tweet_button\">";
+    html += "<a href=\"http://twitter.com/share\" class=\"twitter-share-button\" data-url=\"http://"+host+"/noticias/"+message.article.slug+"\" data-text=\""+message.article.title+"\" data-count=\"horizontal\" data-via=\"noticiasdopiaui\">Tweet</a>";
+    html += "</div>";
+    html += "<p class=\"published\">Texto publicado <a href=\""+message.article.origin_url+"\" rel=\"external\">originalmente</a> no site <a href=\""+message.article.domain.slug+"\" class=\""+message.article.domain.slug+"\">"+message.article.domain.title+"</a></p>";
+    html += "</div></header><div class=\"text\">"+message.article.text+"</div></article>";
     return html;
   }
   if (WebSocket) {
-    host = "<%= request.host %>";
     var ws = new WebSocket("ws://"+host+":3001/");
     ws.onopen = function() {console.log("connected");}
     ws.onmessage = function(msg) {
       message = $.parseJSON(msg.data);
       if ($("article#"+message.article.id).length == 0) {
         $('#articles_list').prepend(create_article(message));
-        $("article#"+message.article.id).timeago();
       }
     }
   }

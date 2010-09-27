@@ -5,7 +5,9 @@
       <time class="timeago" datetime="<%= article.published_at.iso8601%>" pubdate><%= article.published_at%></time>
     </p>
     <div class="extra">
-      <div class="tweet_button"><%= tweet_button(:url => article_url(article.slug), :text => article.title) %></div>
+      <div class="tweet_button">
+        <a href="http://twitter.com/share" class="twitter-share-button" data-url="<%= article_url(article.slug) %>" data-text="<%= article.title%>" data-count="horizontal" data-via="noticiasdopiaui">Tweet</a>
+      </div>
       <p class="published">Texto publicado <%= link_to("originalmente", article.origin_url, :rel => :external, :class => "original") %> no site <%= link_to(article.domain.title, domain_url(article.domain.slug)) %></p>
     </div>
   </header>

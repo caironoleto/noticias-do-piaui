@@ -122,6 +122,10 @@ body {
   padding-left:25px;
   background:url('/images/cv.png') 0 1px no-repeat;
 }
+.source-ai5piaui h1 {
+  padding-left:25px;
+  background:url('/images/ai5piaui.ico') 0 1px no-repeat;
+}
 .published {
   color:#999;
   font-size:0.85em;

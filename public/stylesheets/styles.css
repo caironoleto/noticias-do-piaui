@@ -186,7 +186,7 @@ section#articles_list {
 ul {padding:10px;}
 ul a {}
 ul li {display:inline;padding-left:15px;}
-#articles_index article .extra, #articles_index .text, #domains_show .text {display:none;}
+article .extra, #articles_index .text, #domains_show .text {display:none;}
 #articles_index .text { 
   padding:5px 15px;
   margin:5px 0;

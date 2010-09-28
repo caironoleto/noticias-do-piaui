@@ -1,5 +1,5 @@
 <% @articles.each do |article| %>
-  <%= render :partial => "article", :locals => {:article => article} %>
+  <%= render :partial => "shared/article", :locals => {:article => article} %>
 <% end %>
 <nav>
   <%= will_paginate @articles%>
@@ -11,7 +11,7 @@ $(document).ready(function() {
   var host = "<%= request.host %>";
   function create_article(message) {
     html = "<article id=\""+message.article.id+"\" class=\"source-"+message.article.domain.slug+"\"><header>";
-    html += "<h1><a href=\""+host+"/noticias/"+message.article.slug+"\" title=\""+message.article.title+"\">"+message.article.title+"</a></h1>";
+    html += "<h1><a href=\"http://"+host+"/noticias/"+message.article.slug+"\" title=\""+message.article.title+"\">"+message.article.title+"</a></h1>";
     html += "<p class=\"complement\"><time class=\"timeago\" datetime=\""+message.article.published_at+"\" pubdate>"+$.timeago.parse(message.article.published_at)+"</time></p>";
     html += "<div class=\"extra\">";
     html += "<div class=\"tweet_button\">";

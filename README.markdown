@@ -24,7 +24,7 @@ And finally:
 
 Notícias do Piauí works basically on find news from feeds, and updates the content using nokogiri accessing the urls from the feed.
 
-To fetch news, you need run *script/runner "Domain.all.each{|d| d.process}"* and *script/delayed_job start"
+To fetch news, you need run *script/runner "Domain.all.each{|d| d.process}"* and *script/delayed_job start*.
 
 Finally, you can start the websocket run *ruby lib/websocket.rb start*
 

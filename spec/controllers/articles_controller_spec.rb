@@ -8,9 +8,11 @@ describe ArticlesController do
   context 'GET index' do
     describe 'responding to GET index' do
       it 'should expose articles as @articles' do
-        Article.should_receive(:paginate).with(:per_page => 30, :page => 1, :order => "published_at desc", :conditions => "text <> ''").and_return([mock_article])
+        articles = [mock_article]
+        Article.should_receive(:ready).and_return(articles)
+        articles.should_receive(:paginate).with(:per_page => 30, :page => 1).and_return(articles)
         get :index
-        assigns[:articles].should eql [mock_article]
+        assigns[:articles].should eql articles
       end
 
       it 'should render index template' do

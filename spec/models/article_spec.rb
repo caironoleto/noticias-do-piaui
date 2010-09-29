@@ -9,10 +9,6 @@ describe Article do
       }
   end
   
-  subject do
-    Article.new(@valid_attributes)
-  end
-  
   before(:each) do
     valid_attributes = {
       :title => "value for title",
@@ -27,6 +23,10 @@ describe Article do
     subject.update_attributes(:domain => domain)
   end
   
+  subject do
+    Article.new(@valid_attributes)
+  end
+
   it "should create slug after save" do
     subject.save
     subject.slug.should == "value-for-title"
@@ -36,6 +36,18 @@ describe Article do
     lambda {
       subject.process
     }.should change(Delayed::Job, :count).by(1)
+  end
+  
+  describe "named scopes" do
+    before(:each) do
+      @article_invalid = Article.create(@valid_attributes.merge(:published_at => Time.now + 1.hour))
+      @article_valid_1 = Article.create(@valid_attributes.merge(:published_at => Time.now - 10.minutes))
+      @article_valid_2 = Article.create(@valid_attributes.merge(:published_at => Time.now - 1.hour))
+    end
+
+    it "should return all ready article" do
+      Article.ready.should == [@article_valid_1, @article_valid_2]
+    end
   end
   
   describe "process the text" do

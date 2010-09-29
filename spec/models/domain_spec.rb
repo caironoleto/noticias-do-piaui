@@ -20,7 +20,7 @@ describe Domain do
     subject.slug.should eql "value-for-title"
   end
 
-  it "should create new article from feed" do
+  it "should create new articles from feed" do
     lambda {
       subject.process
     }.should change(Article, :count).by(10)

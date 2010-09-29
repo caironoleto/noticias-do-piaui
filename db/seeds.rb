@@ -1,7 +1,4 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#   
-#   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
-#   Major.create(:name => 'Daley', :city => cities.first)
+Domain.create(:title => "180 Graus", :url => "http://180graus.com", :feed_url => "http://180graus.com/rss/index.xml", :nokogiri_search_field => "#texto_materia", :paragraph_tag => "p", :nokogiri_time_fields => "span#data,span#data_hora", :last_news_url => "http://180graus.com/ultimas-noticias", :last_news_search_field => ".lista-noticias .item h3 a")
+Domain.create(:title => "Cidade Verde", :url => "http://cidadeverde.com", :created_at => "2010-08-28 13:20:29", :updated_at => "2010-09-05 02:15:33", :feed_url => "http://www.cidadeverde.com/rss", :nokogiri_search_field => "#materia-texo", :paragraph_tag => "p", :nokogiri_time_fields => "p.data", :slug => "cidade-verde", :last_news_url => nil, :last_news_search_field => nil)
+Domain.create(:title => "Meio Norte", :url => "http://meionorte.com", :created_at => "2010-08-28 14:12:43", :updated_at => "2010-09-05 02:15:33", :feed_url => "http://www.meionorte.com/rssnoticias", :nokogiri_search_field => "#HOTWordsTxt", :paragraph_tag => "p", :nokogiri_time_fields => "div.fonte_", :slug => "meio-norte", :last_news_url => nil, :last_news_search_field => nil)
+Domain.create(:title => "ai5piaui", :url => "http://www.ai5piaui.com/", :created_at => "2010-09-28 03:13:16", :updated_at => "2010-09-28 03:13:16", :feed_url => "http://feeds.feedburner.com/ai5piaui", :nokogiri_search_field => "#HOTWordsTxt", :paragraph_tag => "p", :nokogiri_time_fields => "div.date", :slug => "ai5piaui", :last_news_url => "http://www.ai5piaui.com/category/plantao", :last_news_search_field => ".news .news_i h2 a")

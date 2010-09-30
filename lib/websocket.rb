@@ -21,7 +21,7 @@ class Processor < SimpleDaemon::Base
     server.run() do |ws|
       ws.handshake()
       loop do
-        article = Article.ready.first.to_json(:include => {:domain => {:only => [:url, :title, :slug]}})
+        article = Article.ready(Time.now).first.to_json(:include => {:domain => {:only => [:url, :title, :slug]}})
         puts article
         ws.send(article)
         sleep(5)

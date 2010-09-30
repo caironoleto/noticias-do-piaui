@@ -21,6 +21,8 @@ Spec::Runner.configure do |config|
   config.fixture_path = RAILS_ROOT + '/spec/fixtures/'
   config.before(:each) do
     Delayed::Backend::ActiveRecord::Job.delete_all
+    time_now = Time.now
+    Time.stub!(:now).and_return(Time.parse("#{time_now.day}"))
   end
 
   config.after(:each) do

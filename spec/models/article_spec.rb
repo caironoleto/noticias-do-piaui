@@ -46,7 +46,7 @@ describe Article do
     end
 
     it "should return all ready article" do
-      Article.ready.should == [@article_valid_1, @article_valid_2]
+      Article.ready(Time.now).should == [@article_valid_1, @article_valid_2]
     end
   end
   

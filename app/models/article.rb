@@ -2,7 +2,7 @@ class Article < ActiveRecord::Base
   belongs_to :domain
   before_save :create_slug
   
-  named_scope :ready, {:conditions => ["text <> '' and published_at <= ?", Time.now.utc], :order => "published_at desc"}
+  named_scope :ready, lambda {|time| {:conditions => ["text <> '' and published_at <= ?", time.utc], :order => "published_at desc"}}
   
   def create_slug
     self.slug = title.parameterize

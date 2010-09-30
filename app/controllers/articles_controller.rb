@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
   # GET /articles.:format
   def index
-    @articles = Article.ready.paginate(:per_page => 30, :page => params.fetch(:page, 1).to_i)
+    @articles = Article.ready(Time.now).paginate(:per_page => 30, :page => params.fetch(:page, 1).to_i)
   end
 
   # GET /articles/:id.:format

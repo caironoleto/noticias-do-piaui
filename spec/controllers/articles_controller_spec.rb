@@ -9,7 +9,7 @@ describe ArticlesController do
     describe 'responding to GET index' do
       it 'should expose articles as @articles' do
         articles = [mock_article]
-        Article.should_receive(:ready).and_return(articles)
+        Article.should_receive(:ready).with(Time.now).and_return(articles)
         articles.should_receive(:paginate).with(:per_page => 30, :page => 1).and_return(articles)
         get :index
         assigns[:articles].should eql articles

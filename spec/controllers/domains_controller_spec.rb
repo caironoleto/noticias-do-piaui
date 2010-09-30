@@ -26,7 +26,7 @@ describe DomainsController do
     it "should expose article as @articles" do
       articles = [mock_article]
       Domain.should_receive(:find_by_slug).with("cidade-verde").and_return(mock_domain(:articles => articles, :title => ""))
-      mock_domain.articles.should_receive(:ready).and_return(articles)
+      mock_domain.articles.should_receive(:ready).with(Time.now).and_return(articles)
       mock_domain.articles.should_receive(:paginate).with(:per_page => 30, :page => 1).and_return(articles)
       get :show, :slug => "cidade-verde"
       assigns[:articles].should eql articles
@@ -35,7 +35,7 @@ describe DomainsController do
     it "should expose article as @articles with different page" do
       articles = [mock_article]
       Domain.should_receive(:find_by_slug).with("cidade-verde").and_return(mock_domain(:articles => articles, :title => ""))
-      mock_domain.articles.should_receive(:ready).and_return(articles)
+      mock_domain.articles.should_receive(:ready).with(Time.now).and_return(articles)
       mock_domain.articles.should_receive(:paginate).with(:per_page => 30, :page => 2).and_return(articles)
       get :show, :slug => "cidade-verde", :page => "2"
       assigns[:articles].should eql [mock_article]

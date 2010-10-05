@@ -31,6 +31,13 @@ describe Article do
     subject.save
     subject.slug.should == "value-for-title"
   end
+  
+  it "should remove www from origin_url" do
+    subject.update_attributes(:origin_url => "http://www.this.is/my-article")
+    subject.origin_url.should == "http://this.is/my-article"
+    subject.update_attributes(:origin_url => "http://this.is/my-article")
+    subject.origin_url.should == "http://this.is/my-article"
+  end
 
   it "should add in DJ when process" do
     lambda {

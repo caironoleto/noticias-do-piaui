@@ -10,7 +10,7 @@ class Domain < ActiveRecord::Base
     feed = Feedzirra::Feed.fetch_and_parse(feed_url)
     if feed.present? && feed.respond_to?(:entries)
       feed.entries.each do |entry|
-        unless articles.find_by_origin_url(entry.url).present?
+        unless articles.find_by_origin_url(entry.url.remove_www).present?
           article = articles.create(:title => entry.title, :origin_url => entry.url)
           article.process
         end

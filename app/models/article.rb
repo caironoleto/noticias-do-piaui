@@ -1,12 +1,9 @@
 class Article < ActiveRecord::Base
   belongs_to :domain
   before_save :create_slug
+  before_save :remove_www_from_origin_url
   
   named_scope :ready, lambda {|time| {:conditions => ["text <> '' and published_at <= ?", time.utc], :order => "published_at desc"}}
-  
-  def create_slug
-    self.slug = title.parameterize
-  end
   
   def process
     self.text = ""
@@ -53,6 +50,15 @@ class Article < ActiveRecord::Base
   end
 
   protected
+  
+  def create_slug
+    self.slug = title.parameterize
+  end
+  
+  def remove_www_from_origin_url
+    self.origin_url = origin_url.remove_www
+  end
+  
   def parse_date(date)
     regex = "([0-9]*)[/|-]([0-9]*)[/|-]([0-9]*)"
     "#{date.match(regex)[2]}/#{date.match(regex)[1]}/#{date.match(regex)[3]}"

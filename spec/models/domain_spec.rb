@@ -19,15 +19,22 @@ describe Domain do
     subject.save
     subject.slug.should eql "value-for-title"
   end
+  
+  it "should create new articles from feed and url" do
+    lambda {
+      subject.process
+    }.should change(Article, :count).by(20)
+  end
 
   it "should create new articles from feed" do
+    subject.update_attributes(:last_news_url => nil)
     lambda {
       subject.process
     }.should change(Article, :count).by(10)
   end
 
-  it "should create new article from url" do
-    subject.update_attributes(:feed_url => "whatever.xml")
+  it "should create new articles from url" do
+    subject.update_attributes(:feed_url => nil)
     lambda {
       subject.process
     }.should change(Article, :count).by(10)

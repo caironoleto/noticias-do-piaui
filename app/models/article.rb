@@ -1,7 +1,6 @@
 class Article < ActiveRecord::Base
   belongs_to :domain
-  before_save :create_slug
-  before_save :remove_www_from_origin_url
+  before_save :create_slug, :check_origin_url
   
   named_scope :ready, lambda {|time| {:conditions => ["text <> '' and published_at <= ?", time.utc], :order => "published_at desc"}}
   
@@ -50,6 +49,17 @@ class Article < ActiveRecord::Base
   end
 
   protected
+  
+  def check_origin_url
+    remove_www_from_origin_url
+    verify_domain
+  end
+  
+  def verify_domain
+    unless origin_url =~ /#{domain.url}/
+      self.origin_url = "#{domain.url}#{origin_url}"
+    end
+  end
   
   def create_slug
     self.slug = title.parameterize

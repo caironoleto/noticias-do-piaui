@@ -10,16 +10,16 @@ describe Article do
   end
   
   before(:each) do
-    valid_attributes = {
+    @domain_valid_attributes = {
       :title => "value for title",
-      :url => "value for url",
+      :url => "http://original-domain.com",
       :feed_url => "#{File.read("spec/fixtures/180_rss.rss")}",
       :nokogiri_search_field => "#texto_materia",
       :nokogiri_time_fields => "span#data,span#data_hora",
       :paragraph_tag => "p"
     }
 
-    domain = Domain.create!(valid_attributes)
+    domain = Domain.create!(@domain_valid_attributes)
     subject.update_attributes(:domain => domain)
   end
   
@@ -31,6 +31,30 @@ describe Article do
     subject.save
     subject.slug.should == "value-for-title"
   end
+  
+  describe "www on origin url" do
+    it "should remove www" do
+      subject.update_attributes(:origin_url => "#{subject.domain.url}/my-article")
+      subject.origin_url.should == "#{subject.domain.url}/my-article"
+      subject.update_attributes(:origin_url => "#{subject.domain.url}/my-article")
+      subject.origin_url.should == "#{subject.domain.url}/my-article"
+    end
+    
+    it "should don't remove www" do
+      subject.domain.update_attributes(:work_only_with_www => false, :url => "http://www.original-domain.com")
+      subject.update_attributes(:origin_url => "#{subject.domain.url}/my-article")
+      subject.origin_url.should == "#{subject.domain.url}/my-article"
+      subject.update_attributes(:origin_url => "#{subject.domain.url}/my-article")
+      subject.origin_url.should == "#{subject.domain.url}/my-article"
+    end
+  end
+
+  it "should complete the origin_url with domain" do
+    subject.update_attributes(:origin_url => "/this-is-my-url")
+    subject.origin_url.should == "#{subject.domain.url}/this-is-my-url"
+    subject.update_attributes(:origin_url => "#{subject.domain.url}/this-is-my-url")
+    subject.origin_url.should == "#{subject.domain.url}/this-is-my-url"
+  end
 
   it "should add in DJ when process" do
     lambda {
@@ -40,9 +64,10 @@ describe Article do
   
   describe "named scopes" do
     before(:each) do
-      @article_invalid = Article.create(@valid_attributes.merge(:published_at => Time.now + 1.hour))
-      @article_valid_1 = Article.create(@valid_attributes.merge(:published_at => Time.now - 10.minutes))
-      @article_valid_2 = Article.create(@valid_attributes.merge(:published_at => Time.now - 1.hour))
+      domain = Domain.create!(@domain_valid_attributes)
+      @article_invalid = Article.create(@valid_attributes.merge(:published_at => Time.now + 1.hour, :domain => domain))
+      @article_valid_1 = Article.create(@valid_attributes.merge(:published_at => Time.now - 10.minutes, :domain => domain))
+      @article_valid_2 = Article.create(@valid_attributes.merge(:published_at => Time.now - 1.hour, :domain => domain))
     end
 
     it "should return all ready article" do
@@ -51,6 +76,10 @@ describe Article do
   end
   
   describe "process the text" do
+    before(:each) do
+      subject.domain.update_attributes(:url => Rails.root)
+    end
+    
     it "should save the text" do
       subject.update_attributes(:origin_url => "#{Rails.root}/spec/fixtures/180_page_1.html")
       subject.process_without_send_later #No send to delayed job

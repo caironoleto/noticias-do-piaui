@@ -4,7 +4,7 @@ describe Domain do
   before(:each) do
     @valid_attributes = {
       :title => "value for title",
-      :url => "value for url",
+      :url => "",
       :feed_url => "file://#{Rails.root}/spec/fixtures/180_rss.rss",
       :last_news_url => "#{Rails.root}/spec/fixtures/180_last_news.html",
       :last_news_search_field => ".lista-noticias .item h3 a"
@@ -19,15 +19,22 @@ describe Domain do
     subject.save
     subject.slug.should eql "value-for-title"
   end
+  
+  it "should create new articles from feed and url" do
+    lambda {
+      subject.process
+    }.should change(Article, :count).by(20)
+  end
 
   it "should create new articles from feed" do
+    subject.update_attributes(:last_news_url => nil)
     lambda {
       subject.process
     }.should change(Article, :count).by(10)
   end
 
-  it "should create new article from url" do
-    subject.update_attributes(:feed_url => "whatever.xml")
+  it "should create new articles from url" do
+    subject.update_attributes(:feed_url => nil)
     lambda {
       subject.process
     }.should change(Article, :count).by(10)

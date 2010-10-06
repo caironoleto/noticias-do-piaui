@@ -7,7 +7,8 @@ describe Domain do
       :url => "",
       :feed_url => "file://#{Rails.root}/spec/fixtures/180_rss.rss",
       :last_news_url => "#{Rails.root}/spec/fixtures/180_last_news.html",
-      :last_news_search_field => ".lista-noticias .item h3 a"
+      :last_news_search_field => ".lista-noticias .item h3 a",
+      :work_only_with_www => true
     }
   end
   

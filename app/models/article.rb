@@ -51,8 +51,8 @@ class Article < ActiveRecord::Base
   protected
   
   def check_origin_url
-    remove_www_from_origin_url
     verify_domain
+    remove_www_from_origin_url if domain.work_only_with_www
   end
   
   def verify_domain

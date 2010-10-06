@@ -32,11 +32,21 @@ describe Article do
     subject.slug.should == "value-for-title"
   end
   
-  it "should remove www from origin_url" do
-    subject.update_attributes(:origin_url => "#{subject.domain.url}/my-article")
-    subject.origin_url.should == "#{subject.domain.url}/my-article"
-    subject.update_attributes(:origin_url => "#{subject.domain.url}/my-article")
-    subject.origin_url.should == "#{subject.domain.url}/my-article"
+  describe "www on origin url" do
+    it "should remove www" do
+      subject.update_attributes(:origin_url => "#{subject.domain.url}/my-article")
+      subject.origin_url.should == "#{subject.domain.url}/my-article"
+      subject.update_attributes(:origin_url => "#{subject.domain.url}/my-article")
+      subject.origin_url.should == "#{subject.domain.url}/my-article"
+    end
+    
+    it "should don't remove www" do
+      subject.domain.update_attributes(:work_only_with_www => false, :url => "http://www.original-domain.com")
+      subject.update_attributes(:origin_url => "#{subject.domain.url}/my-article")
+      subject.origin_url.should == "#{subject.domain.url}/my-article"
+      subject.update_attributes(:origin_url => "#{subject.domain.url}/my-article")
+      subject.origin_url.should == "#{subject.domain.url}/my-article"
+    end
   end
 
   it "should complete the origin_url with domain" do

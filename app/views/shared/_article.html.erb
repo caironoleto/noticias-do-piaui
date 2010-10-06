@@ -1,6 +1,6 @@
 <article id="<%= article.id %>" class="source-<%= article.domain.slug %>">
   <header>
-    <h1><%= link_to(article.title, article_url(article.slug), :title => article.title) %></h1>
+    <h1><%= link_to(article.title, article_path(article.slug), :title => article.title) %></h1>
     <p class="complement">
       <time class="timeago" datetime="<%= article.published_at.iso8601%>" pubdate><%= article.published_at%></time>
     </p>
